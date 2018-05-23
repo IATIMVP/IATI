@@ -1,0 +1,52 @@
+{
+  "name": "Industry",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "react": "16.3.1",
+    "react-native": "0.55.2",
+    "react-native-dismiss-keyboard": "^1.0.0",
+    "react-native-fbsdk": "^0.7.0",
+    "react-native-google-sign-in": "^1.0.16",
+    "react-native-image-picker": "^0.26.7",
+    "react-native-keyboard-aware-scroll-view": "^0.5.0",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-native-simple-radio-button": "^2.7.1",
+    "react-native-vector-icons": "^4.6.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^4.8.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.46.2",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "22.4.3",
+    "prettier-eslint-cli": "^4.7.1",
+    "react-test-renderer": "16.3.1",
+    "remote-redux-devtools-on-debugger": "^0.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

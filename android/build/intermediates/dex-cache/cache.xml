@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f25c915bb066fd382c930f9d171a7235e74fe5d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-vector-icons-unspecified_abb42661a818b75450d0cd94458f3ef69df31ddf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="caa03787689212c10939f308a55a8dc8a3333ed2">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-27.0.2_9ac636356db14a30cce6198bdff99ec6dc9b3182.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_ff8c0838387bf8376cd1644af342741030c35a89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_fa5f40df5d6556a1977e64f11e0808844d654f73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_407bda2469c778b4b669a21b2a04ea7a69cdf1bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_4579f43c6fec738bc07857b4f61ad03d01c9a8df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-image-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ad3c33c320b4d0b7504e97aa46a185dea8bd1f1c">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-image-picker-unspecified_b0a2e9be4432e0915ae287fd96b9f5c00c59c6e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_5dd2b66d3321bc96283ee8e04c52b2302bb66a05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_3f2f5738921ea921096e779274c05d768d2b01a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_9554ab16983ff5ede0aa7c59387dc6d966389712.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_17d38bbf895f33ff56706fd4b6780abc999cf778.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_d53efa89ffb3e4c3a5db2bf70a981a663ccd81e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_5ae70f36c19189b9359df7bd55dcd53212b6693b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_7e558a10d3bb7e8650ae713e3c0e67b01944b694.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_fa5f40df5d6556a1977e64f11e0808844d654f73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_a8b8138c32cacff7246c93289b1a1badc07e7706.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ed6560f31a6a40b5965f5879d8f2eab1f68def05">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-27.0.2_f3c41bbb7962b9a95af904e7618229679fc07a37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ab689d36e3c7425adf1e32986075045d1baf4b2">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-places-4.33.0_2afd5b7759e72e745de3a690d33ceb12cdb66963.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3faaae67aee35dc5f7beceb16086a04d95353a62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="04cd0cacbedcb338f64665b88bad64d145325fbd">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-27.0.2_8cc7120323fcaf64ff8fa6c5ee9121345399cdfc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-10.0.1_dce3cec73ef5571e043896fce913ed79afc700a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-10.0.1_7bbebd04818d97284facc0dfe7fa557d38faa78e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.1_9ae1ca8058d47211b2aaca73fad9bc0fc6d35c30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fe3916317a699975bcce0cba2d13fd2d8cf88922">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-27.0.2_b0059446d00374e4e0f54729c041e18d313f3f26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b478831814c5b6a1337f9e75d696d5faa6973519">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-core-4.33.0_8d69f57821cd8730481836fab5029452ab30be57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95dbd34766d3f158ef20de4b5b0206118e960709">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-login-4.33.0_b2c3bde4aee87de3f7adb90c26548ea025421a6f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_38445f8894d12d84a9584e3f686513d50d39308e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f258a1963019891f7ae112bde919704f5eb967f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-fbsdk/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c714030b351c36ddb98a9628208f2e3451e48213">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-fbsdk-unspecified_b9832f7abee5aa3da955da66ced2af1d980d7128.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_837adb813442a145fa16d8d08b9a8bc9e19484aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.3_21619c5c235958eed81f8300bf95ea92278e7184.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d9151b05d74c7d17dba9485cbb56be7e16ed9aa">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-common-4.33.0_62c53682bb136f5614025cf806cf6d8dd27862bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d3dda07fbd30171edc150e4f13884fce5cd9926">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-messenger-4.33.0_3ab155d33e3e8e168ca763d73ecab89f0bea5d51.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.2/b9ef4342c934a1a8b107506273dc8061662a322/support-annotations-27.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0b9ef4342c934a1a8b107506273dc8061662a322">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/support-annotations-27.0.2_37e3765e8a2d7ee7fec052d61debd8e98beadacb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f64aa03e24769f0e10f35f1c08e4d004b5db067b">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-share-4.33.0_8a36d7060805fafe71e49f6bb31ba2c4f278683a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_61ef808974b5c980ffa364190bdd1eca04bfa42d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ed6560f31a6a40b5965f5879d8f2eab1f68def05">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-27.0.2_7a13915ba0afd9ea5a6d801d72eeff89830bb75b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-applinks-4.33.0_d8493b94dfd3bcaa80230010324b9f11086ad95e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f64aa03e24769f0e10f35f1c08e4d004b5db067b">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-share-4.33.0_d9e4df06a63aec14e983fadb15df10e23d8799c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="618f75fe11febf263e3234c7da7dc892232a5608">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-27.0.2_dc37c72c0782401b67b74a8a4d75e38a900d7d11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_9a9ec3cb81a83438c0a53461789d4f002a464530.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e9d3a3d3a781fe8fe55b743c397ae7f097c21b0">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.2_262edefc368e6fe238920f27de8ce6efc2ed252a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-image-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ad3c33c320b4d0b7504e97aa46a185dea8bd1f1c">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-image-picker-unspecified_f23deb4eb519c1c7087d3d3684bea454f69b162d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b1c250352bb7bbd5ea1982ca5165f2a81f36b530">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.33.0_648e8771cfa89dbbdabefa99c1ece0dc66090a55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fe3916317a699975bcce0cba2d13fd2d8cf88922">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-27.0.2_67963159b06a625725b5dd0183f1277681d8dd00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14bfdbf5594d4d7c320de20831849050788ab1e3">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-27.0.2_c7ec4343cc98cc7300f2648f72331ad719e10ae6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_2b22c3ed04ee4362092ef619e80d5b16493c112d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-10.0.1_a633bae3bcd5fb46d548008fdb2fb87150398027.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_5bc0ba10f9c754022f5561deecaf2d8d0036d467.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac2ce6027755bcf49442e70597bec0feb9064f68">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-27.0.2_4286a443859ebc506f29bc23757411668e5c7702.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-applinks-4.33.0_02af51f1b962b7585bac784761d6cdbc1101b3b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/customtabs/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cdebcd9e0580b35115f655f8dc8ed7a66a8ef0fc">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-27.0.2_5ba156102da5611d8b7d61a19b5243b7595118aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_38445f8894d12d84a9584e3f686513d50d39308e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25c8cb628374f9a2d59ff9e1172753751e9a9f84">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-27.0.2_8b9ee2437edea61170f4192ddce70bddfd40e26b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/core-3.3.0_6128bc039ba061ecad6741a83102c3a591f1ace9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_9a9ec3cb81a83438c0a53461789d4f002a464530.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25c8cb628374f9a2d59ff9e1172753751e9a9f84">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-27.0.2_00a1b781127393ab9ce3ebbf2a456dbfdd5ca8d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.1_f57c07b80176be60a41f75599b46dc5f04d3e896.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_0f912d4552d14c0b1a6d8ed979e49b15bb127363.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d3dda07fbd30171edc150e4f13884fce5cd9926">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-messenger-4.33.0_e78ee33a0525534d91542a2a32ea75e9095050fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b432e82447a3af781e927b9ba0bbb9fe2a496d4a">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-27.0.2_d7000615a02223a943dc248c76518f81e73bf373.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bcd0bcdef85b31a656af76e39c0c95ce70800772">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-27.0.2_1d496c47e8d925ed530781af82c64d544eb36d15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_61ef808974b5c980ffa364190bdd1eca04bfa42d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95dbd34766d3f158ef20de4b5b0206118e960709">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-login-4.33.0_25b2cbf3c60eb9209e2765a99f45a583b88d82bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_995211d788c22ef7fd16ac15acb5f0b201950998.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ab689d36e3c7425adf1e32986075045d1baf4b2">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-places-4.33.0_e33291ad92df5f477ca4c8c4a942de9ec0fc0fc9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b432e82447a3af781e927b9ba0bbb9fe2a496d4a">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-27.0.2_4c348dc722bbf606a6e86e203ecb471b6465c88e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b1c250352bb7bbd5ea1982ca5165f2a81f36b530">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.33.0_87de061a51883a21220ea02db4623c6ab3e72588.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="caa03787689212c10939f308a55a8dc8a3333ed2">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-27.0.2_8831415dafbfa212eb0adda7387381a740665b27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="04cd0cacbedcb338f64665b88bad64d145325fbd">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-27.0.2_abd8cd93131e21b89660baf1e61812c7628a2824.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_3f2f5738921ea921096e779274c05d768d2b01a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_995211d788c22ef7fd16ac15acb5f0b201950998.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e9d3a3d3a781fe8fe55b743c397ae7f097c21b0">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.2_342d5941ed605fc0bbd96f070bac3a2d8833f90f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-image-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cdc28e1c949e7fe099e4ae3c7c97151627fc0b07">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-image-picker-unspecified_f23deb4eb519c1c7087d3d3684bea454f69b162d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_5dd2b66d3321bc96283ee8e04c52b2302bb66a05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_0f912d4552d14c0b1a6d8ed979e49b15bb127363.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_407bda2469c778b4b669a21b2a04ea7a69cdf1bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_41455bea76582de0ce2baeab54ff313037351669.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f25c915bb066fd382c930f9d171a7235e74fe5d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d7f60c4783872861222166f6164215f8951c7b1">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/common-1.0.3_3959b392661d048d9181637e2ac035251c967d19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-10.0.1_4434810654873ab7f6e2653f846b68ba88754062.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_d53efa89ffb3e4c3a5db2bf70a981a663ccd81e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="618f75fe11febf263e3234c7da7dc892232a5608">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-27.0.2_3f7cda7e5a86bed417c7f81f60ac70e5d0504c5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.3_91d3429f8484471e27ca02dbf30d31d4c30566c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-vector-icons-unspecified_779a8551618397dbe167bcb2e438be3d9acc5715.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d9151b05d74c7d17dba9485cbb56be7e16ed9aa">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-common-4.33.0_f04c21f48c2457b88e7daa6ad22d3bb01761e039.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac2ce6027755bcf49442e70597bec0feb9064f68">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-27.0.2_0ecffefb815c35d4a1ee62d22bc5c3d2f34b0a1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-10.0.1_e2ea7778a3e769d4cb92eed8f005c3e78094794a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-google-sign-in/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e1c8c9187c133411ab8d5382a9243f8acfb4fc4b">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-google-sign-in-unspecified_71e65250e78a643aef5d405773f8e6c5f87eaadb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_0791390c672c3c10f63bfd886fe6d1d30e85547d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.2/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_91d37d0e5db591c9d5f2ba5176a4ed6005aa3cdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14bfdbf5594d4d7c320de20831849050788ab1e3">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-27.0.2_c173ed62c242fbcdac91b31359eb8b52786acf02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/Industry/react-native-fbsdk/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c714030b351c36ddb98a9628208f2e3451e48213">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/Industry-react-native-fbsdk-unspecified_c16ed32cf7ae78e63265f29f894de91c8766d68c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.33.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b478831814c5b6a1337f9e75d696d5faa6973519">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-core-4.33.0_1472bf5a1a7b17b40838fa1d09384956bd5dba98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3faaae67aee35dc5f7beceb16086a04d95353a62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bcd0bcdef85b31a656af76e39c0c95ce70800772">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-27.0.2_bad15ae5dc7f2c4b4f20c9686c0b2fb7a96316fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.android.support/customtabs/27.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cdebcd9e0580b35115f655f8dc8ed7a66a8ef0fc">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-27.0.2_cd259b83c45e89dd2bd0d3eb42e517b0a4031f85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_2b22c3ed04ee4362092ef619e80d5b16493c112d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_320f3852ef61a9ffaddb6d56d5806a6898642c92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_2b98fa52e5c8a6fcabf7b617d562a7af8dfa1a42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f258a1963019891f7ae112bde919704f5eb967f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.2/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/anushrit/Desktop/newApp/Archive/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_fe04ae58ac0492b7f01b6adeed8e79aa9d861c66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/anushrit/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/anushrit/Desktop/Archive/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_4579f43c6fec738bc07857b4f61ad03d01c9a8df.jar" />
+    </item>
+
+</items>

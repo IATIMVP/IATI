@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "761618925704",
+    "firebase_url": "https://industry-1526364207855.firebaseio.com",
+    "project_id": "industry-1526364207855",
+    "storage_bucket": "industry-1526364207855.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761618925704:android:deb851fc1a753b9f",
+        "android_client_info": {
+          "package_name": "com.industry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761618925704-jcd45hve3a2cirekrk4v1lebk6uemo3b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "761618925704-b8ogie4dap8iofpb54fu0jjbl895bthg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBje2wSYkmU0MM8rkLK34qrF_KHCqfOt9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
