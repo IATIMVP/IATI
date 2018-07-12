@@ -1,0 +1,43 @@
+  <!-- sidebar -->
+  <div class="left-sidebar">
+    <div class="sidebar-content">
+      <div class="user-summary clearfix">
+        <span *ngIf="picture"><img [src]="picture" alt="user avtrar" width="50" height="50" class="img-fluid" /></span>
+        <span *ngIf="!picture"><img src="../../assets/images/user-avtar.png" alt="user avtrar" width="50" height="50" class="img-fluid" /></span>
+        <div class="summary">
+          <h6>{{name}}</h6>
+          <small>{{email}}</small>
+          <p>New York, NY | Indie-Rock <span>$0</span> per single</p>
+        </div>
+      </div>
+
+      <p class="bio"><small>BIO</small> --</p>
+      
+      <div class="follower-content clearfix">
+        <div>
+          <span class="float-left">POSTS</span>
+          <span class="float-right">0</span>
+        </div>
+        <div>
+          <span class="float-left">SUBSCRIBERS</span>
+          <span class="float-right">0</span>
+        </div>
+        <div>
+          <span class="float-left">FOLLOWERS</span>
+          <span class="float-right">0</span>
+        </div>
+        <div>
+          <span class="float-left">COMMENTS</span>
+          <span class="float-right">0</span>
+        </div>
+      </div>
+    </div>
+
+    <ul>
+      <li class="active"><a href="/dashboard">DASHBOARD</a></li>
+      <!-- <li class=""><a href="javascript:;">PAYOUTS</a></li> -->
+      <li class=""><a href="javascript:;">YOUR SUBSCRIBERS</a></li>
+      <li class=""><a href="javascript:;">POSTS INSIGHTS</a></li>
+    </ul>
+  </div>
+  <!-- /sidebar -->

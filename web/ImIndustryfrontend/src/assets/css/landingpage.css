@@ -1,0 +1,244 @@
+.landing-header {
+    background-color: #38fefd;
+    padding: 2.083rem 0;
+    letter-spacing: 0.08rem;
+}
+.landing-header .header-right-col a {
+    font-size: 1.167rem;
+    color: #333;
+    margin-left: 0.9rem;
+}
+.landing-header .header-right-col a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.landing-header .header-right-col .upload-link {
+    display: inline-block;
+    width: 170px;
+    height: 33px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #333;
+}
+.landing-header .header-right-col .upload-link:hover {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+.main-content {
+    letter-spacing: 0.08rem;
+}
+.banner {
+    background-color: #38fefd;
+    padding-top: 2.083rem;
+    color: #333;
+    text-align: center;
+}
+.banner-frame {
+    padding-bottom: 5rem
+}
+.banner h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+.banner p {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 20px 0;
+}
+.banner figure {
+    margin: 4.4rem 0 0;
+}
+.banner figure a + a {
+    margin-left: 3rem
+}
+.how-it-work {
+    padding-top: 7.8rem;
+    padding-bottom: 8rem
+}
+.how-it-work .col-md-4 + .col-md-4:before {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    content: "";
+    color: #333;
+    background-image: url(./../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 10px;
+    height: 16px;
+}
+.how-it-work h2 {
+    font-size: 3rem;
+}
+.how-it-work figure {
+    width: 150px;
+    height: 150px;
+    margin: 3.767rem auto 2.083rem;
+    border-radius: 100%;
+    background-color: #333;
+    text-align: center;
+    line-height: 150px; 
+}
+.how-it-work .text-frame {
+    max-width: 260px;
+    margin: 0 auto;
+}
+.how-it-work h4 {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 24px;
+    min-height: 72px;
+}
+.how-it-work p {
+    color:#7d7d7d;
+    font-size: 1.167rem;
+    font-weight: 600;
+    line-height:18px;
+    margin-bottom: 0; 
+    padding-top: 1.333rem;
+}
+.artists-work { 
+    padding-top: 6.2rem; 
+    background-color: #e8e8e8;
+}
+.artists-work h2 {
+    font-size: 2.917rem;
+    padding-top: 5.5rem;
+    padding-bottom: 3.233rem;
+}
+.artists-work ul {
+    list-style: none inside none; 
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.artists-work ul li {
+    line-height: 25px;
+    padding-bottom: 3rem;
+    padding-left: 5.275rem;
+    position: relative;
+}
+.artists-work ul li span {
+    width: 35px; 
+    height: 35px;
+    background-color: #38fefd;
+    color: #333;
+    line-height: 35px; 
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.333rem;
+}
+
+@media (min-width:1200px){
+    .scroll-down {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+    }
+}
+@media (min-width:991px){
+    .banner {
+        text-align: initial;
+    }
+    .banner-frame {
+        background-image: url(./../images/hand-mobile.png);
+        background-position: 98% 35px;
+        background-repeat: no-repeat;
+        padding-top: 10rem;
+        padding-bottom: 20rem;
+    }
+    .banenr-right {
+        display: none; 
+    }
+}
+
+
+
+@media (max-width:1200px){
+    .header-right-col {
+        padding-right: 30px;
+        text-align: right;
+    }
+}
+@media (max-width:991px){
+    .banner figure {
+        margin: 2.4rem 0 0;
+    }
+    .artists-work h2 {
+        padding-top: 0;
+    }
+    .artists-work-right {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .landing-header {
+        padding: 12px 0;
+        text-align: center;
+    }
+    .header-right-col {
+        text-align: center; 
+        padding-right: 0;
+        padding-top: 12px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .header-right-col {
+        padding-top:0px;
+    }
+}
+@media (max-width:767px) {
+    .margin-top20 {
+        margin-top: 1.667rem;
+    }
+    .how-it-work h4 {
+        min-height: 0;
+    }
+    .how-it-work .col-md-4 + .col-md-4:before {
+        top: 32px;
+        left: 49%;
+        -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    }
+    .how-it-work figure {
+        margin-top: 5.767rem;
+    }
+    .how-it-work p {
+        padding-top: 0.533rem;
+    }
+    .how-it-work .text-frame {
+        text-align: center;
+        max-width: 360px;
+        line-height: normal;
+    }
+}
+@media (max-width:420px){
+    .banner-frame {
+        padding-bottom: 3rem;
+    }
+    .banner h1, .how-it-work h2, .artists-work h2 {
+        font-size: 2.5rem;
+    }
+    .banner p {
+        font-size: 1.5rem;
+        padding: 10px 25px;
+    }
+    .banner figure a + a {
+        margin: 1rem 1.5rem 0;
+        display: inline-block;
+    }
+    .how-it-work figure {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+    }
+    .landing-header .header-right-col .upload-link {
+        margin-left: 1rem;
+    }
+}

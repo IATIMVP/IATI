@@ -1,0 +1,38 @@
+.my-drop-zone { border: dotted 3px lightgray; }
+    .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+    .another-file-over-class { border: dotted 3px green; }
+
+
+bootstrap.css:2428
+.btn-success {
+    color: #fff !important;
+    background-color: #ff52a5 !important;
+    border-color: #ffffff !important;
+}
+.image-cropper-close{display:none !important;    height: 174px;}
+.image-cropper-open{display:block !important;    height: 174px;}
+
+.song-upload-frame i.fa-trash-alt{vertical-align:top;padding:10px;cursor:pointer}
+.light-gray-bg{position:relative}
+.light-gray-bg .closebutton{position:absolute;top:0;right:0;font-size:16px;color:#fff;padding:0 3px;border:0;outline:0;box-shadow:none;width:25px;height:25px;line-height:8px;font-weight:bold;cursor:pointer}
+.outer {
+    
+    display:flex;
+    /* justify-content: center; */
+    padding: 5px;
+  }
+  .outer > div {
+   
+    margin:5px;
+  }
+  .image-cropper-open{
+    margin-bottom: 10px !important;
+  }
+  .image-cropper-open div > img{
+    height: 174px !important;
+    width: 100% !important;
+  }
+  .source-image{
+
+    height:168px !important;
+  }

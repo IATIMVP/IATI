@@ -1,0 +1,233 @@
+<app-login-header></app-login-header>
+
+  <!-- Main Content -->
+  <main class="main clearfix">
+    <app-left-bar></app-left-bar>
+
+    <!-- Dashboard Content -->
+    <div class="content ">
+      <div class="container-fluid">
+        <div class="row">
+         <div class="col-sm-12 col-lg-12">
+         
+         <ul class="nav title" id="myTab" role="tablist">
+		  <li class="nav-item">
+			<a class="nav-link active" id="post-tab" data-toggle="tab" href="#post" role="tab" aria-controls="post" aria-selected="true">All Posts</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" id="paid-tab" data-toggle="tab" href="#paid" role="tab" aria-controls="paid" aria-selected="false">PAID POSTS</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" id="track-tab" data-toggle="tab" href="#track" role="tab" aria-controls="track" aria-selected="false">TRACKS 
+           	<span class="info_icon"><i>Tracks are not considered paid posts. If you want to add a track as a paid post refer to the '+ New Post' button. <br/> Tracks will appear on your profile for fans to listen to.</i></span>
+            </a>
+		  </li>
+		</ul>
+		
+		<div class="tab-content" id="myTabContent">
+			<p-growl [(value)]="msgs"></p-growl>
+			<p-confirmDialog></p-confirmDialog>
+		  <div class="tab-pane fade show active" id="post" role="tabpanel" aria-labelledby="post-tab">
+			 
+          <div class="row">
+			  <div class="col-md-12 col-lg-9 right_border">
+					<h2 class="sub_title">Here is the list of your current posts. <a href="/create-post" class="btn btn-dark">+ NEW POST</a></h2>
+
+			 <div class="table-responsive custom_table">
+				<table class="table">
+				<thead>
+					<tr>
+						<th>Posts</th>
+						<th> </th>
+						<th>Views</th>
+						<th>Likes</th>
+						<th>Comments</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody *ngIf="lists.length > 0">
+						<tr *ngFor="let list of lists; let i = index">
+							<td><span class="image_box"><img src="{{list.icon}}" alt="Cover Image"/></span></td>
+							<td><p>{{list.title}} <small>Everyone - {{list.formattedDate}}</small></p></td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+								<em class="icons"><a href="javascript:;" (click)="editPosts(list._id)"><img src="../../assets/images/Edit.png" alt="Edit Image"/></a>
+								<a href="javascript:;" (click)="deletePosts(list._id)"><img src="../../assets/images/Trash.png" alt="Trash Image"/></a></em>
+							</td>
+						</tr>
+					
+					</tbody>
+					<tbody *ngIf="lists.length == 0">
+							<tr>
+								<td>No records found !!</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>	</td>
+							</tr>
+						
+						</tbody>
+				</table>	
+			 </div>
+
+			  </div>
+
+			  <div class="col-md-12 col-lg-3">
+				  <h2 class="sub_title">Subscription Levels</h2>
+				  <div class="exclusive">
+						<h5>$1+ EXCLUSIVE CONTENT</h5>
+						<p>Access to our IATI feed where we will be posting special behind the scenes clips.</p>
+						<span>20 Subscribers</span> <span>80 Left</span>
+				  </div>
+
+				  <div class="exclusive">
+						<h5>$3+ EXCLUSIVE CONTENT</h5>
+						<p>You wil be able to view our music videos before they are publicly released on Youtube.</p>
+						<span>14 Subscribers</span> <span>86 Left</span>
+				  </div>
+
+					<div class="get_app">
+						<p>Get the full experience. <br/> Download the app.</p>
+						<span>
+							<a href="#"><img src="../../assets/images/app-store.png" alt="App Store"></a>
+							<a href="#"><img src="../../assets/images/play-store.png" alt="Google Play"></a>
+						</span>
+					</div>
+
+			  </div>
+			
+		  </div>
+		  
+		  </div>
+			
+	  
+		  <div class="tab-pane fade" id="paid" role="tabpanel" aria-labelledby="paid-tab">
+			
+          <div class="row">
+			  <div class="col-md-12 col-lg-9 right_border">
+					<h2 class="sub_title">Here is the list of your current posts. <a href="#" class="btn btn-dark">+ NEW POST</a></h2>
+
+			 <div class="table-responsive custom_table">
+				<table class="table">
+				<thead>
+					<tr>
+						<th>Posts</th>
+						<th> </th>
+						<th>Views</th>
+						<th>Likes</th>
+						<th>Comments</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="6"><h6 class="empty_content">You currently have no posts.</h6></td> 
+						</tr> 
+					</tbody>
+				</table>	
+			 </div>
+
+			  </div>
+
+			  <div class="col-md-12 col-lg-3">
+				  <h2 class="sub_title">Subscription Levels</h2>
+				  <div class="exclusive">
+						<h5>$1+ EXCLUSIVE CONTENT</h5>
+						<p>Access to our IATI feed where we will be posting special behind the scenes clips.</p>
+						<span>20 Subscribers</span> <span>80 Left</span>
+				  </div>
+
+				  <div class="exclusive">
+						<h5>$3+ EXCLUSIVE CONTENT</h5>
+						<p>You wil be able to view our music videos before they are publicly released on Youtube.</p>
+						<span>14 Subscribers</span> <span>86 Left</span>
+				  </div>
+
+					<div class="get_app">
+						<p>Get the full experience. <br/> Download the app.</p>
+						<span>
+							<a href="#"><img src="../../assets/images/app_store.png" alt="App Store"></a>
+							<a href="#"><img src="../../assets/images/google_play.png" alt="Google Play"></a>
+						</span>
+					</div>
+
+			  </div>
+			
+		  </div>
+		  	
+		  </div>
+		  <div class="tab-pane fade" id="track" role="tabpanel" aria-labelledby="track-tab">3</div>
+		  
+		</div>
+		</div>
+         
+        </div>
+
+      </div>
+    </div>
+    <!-- /Dashboard Content -->
+  </main>
+  <!-- /Main Content -->
+  <app-footer></app-footer>
+
+
+  <!-- Add Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your track has been added!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="share_link">
+        	<h6 class="title_text">Link to Share:</h6>
+     		<input type="text" class="form-control" placeholder="http://iamtheindustry.com/best-friends-right/...">
+     		<button class="btn round_btn" type="submit">Copy</button>
+     	</div>
+     	
+      </div>
+      <div class="modal-footer flow_root">
+         <h6 class="title_text">Share this link with your friends.</h6>
+         <div class="clearfix"></div>
+         <ul class="social_icons">
+         	<li><a href="#" class="fb"><i class="fab fa-facebook"></i></a></li>
+         	<li><a href="#" class="tw"><i class="fab fa-twitter-square"></i></a></li>
+         	<li><a href="#" class="gplus"><i class="fab fa-google-plus-square"></i></a></li>
+         	<li><a href="#" class="mail"><i class="far fa-envelope"></i></a></li>
+         </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="table-box">
+      <div class="table-box-cell">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm Navigation</h5>
+            </div>
+            <div class="modal-body">
+              <p>You have unsaved changes.<br> Are you sure you want to leave this page&#63;</p>
+
+              <div class="links">
+                <a href="javascript:;" data-dismiss="modal">Stay on this page</a>
+                <a href="javascript:;" data-dismiss="modal">Leave this page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

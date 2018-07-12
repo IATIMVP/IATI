@@ -1,0 +1,256 @@
+<app-login-header></app-login-header>
+<!-- Main Content -->
+<main class="main clearfix">
+
+  <app-left-bar></app-left-bar>
+
+  <!-- Dashboard Content -->
+  <div class="content ">
+    <div class="container-fluid">
+      <form [formGroup]="postForm" (ngSubmit)="submitpost(userInfo);">
+        <div class="row">
+          <div class="col-sm-11">
+            <h1 class="title">
+              <span>CREATE POST</span>
+            </h1>
+            <div class="light-gray-bg m-height125 song-upload-frame" *ngIf="!preview" ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)"
+              [uploader]="uploader">
+              <div class="upload-btn">
+                <a href="javascript:;" *ngIf="uploader.queue.length == 0">Upload songs or drag and drop</a>
+                <a href="javascript:;" *ngIf="uploader.queue.length != 0"> + Add More</a>
+                <input type="file" accept="audio/*" [uploader]="uploader" ng2FileSelect formControlName="music_audio" [(ngModel)]="userInfo.music_audio"
+                  multiple />
+                <br/>
+              </div>
+              <p class="text-center">1GB Max File Size / 2GB Total Storage
+                <br> Supported file types: WAV, MP3, AIF, FLAC, AAC</p>
+            </div>
+
+            <div class="light-gray-bg m-height125 song-upload-frame"  *ngIf="uploader.queue.length > 0" >
+               
+              <table class="table">
+                <tbody [dragula]='"bag-one"' [dragulaModel]='uploader.queue'>
+                  <tr *ngFor="let item of uploader.queue;let i = index">
+                    <td>
+                      <strong>
+                        <i class="fas fa-bars"></i>
+                        {{item.file.name}}
+                      </strong><br>
+                      <audio controls controlsList="nodownload"> <source src="https://iati-audio.s3.amazonaws.com/audio/{{item.file.name}}"> </audio>
+                      <!-- <i class="fas fa-play" (click)="playSound(item)"></i>
+                      <i class="fas fa-stop" (click)="stopSound(i)"></i> -->
+                      <i class="fas fa-trash-alt" style="margin-left:14px" (click)="removeFile(item,item.newName)"></i>
+                    </td>
+                    <td *ngIf="uploader.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+                    <td *ngIf="uploader.isHTML5">
+                      <div class="progress" style="margin-bottom: 0;">
+                        <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+                      </div>
+                    </td>
+                    <td class="text-center">
+                      <span *ngIf="item.isSuccess">
+                        <i class="glyphicon glyphicon-ok"></i>
+                      </span>
+                      <span *ngIf="item.isError">
+                        <i class="glyphicon glyphicon-remove"></i>
+                      </span>
+                    </td>
+                    <td nowrap>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div *ngIf="preview" class="light-gray-bg m-height125 song-upload-frame embed-link">
+              <button (click)="closeVideoPreview()" class="closebutton">x</button>
+               <iframe style="margin-left: 28%;margin-bottom:26px;" width="250" height="150" [src]="embedUrl">
+               </iframe>
+            
+               <div class="link-box">
+                 <input type="text" class="form-control"  (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>"  />
+               </div>
+             </div>
+            
+            <div *ngIf="uploader.queue.length == 0 && !preview" class="light-gray-bg m-height125 song-upload-frame embed-link">
+             
+              <p>You have the option to embed a URL instead.</p>
+              <div class="link-box">
+                <input type="text" class="form-control" formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>" />
+              </div>
+            </div>
+
+            <div class="required-text">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 cover-photo">
+            <div class="post-cover-image">
+              <p>COVER IMAGE*</p>
+              <figure>
+                  <image-cropper
+                  class={{previewClass}}
+                  [imageChangedEvent]="imageChangedEvent"
+                  [maintainAspectRatio]="true"
+                  [aspectRatio]="3 / 3"
+                  [resizeToWidth]="128"
+                  format="png"
+                  (imageCropped)="imageCropped($event)"
+                  (imageLoaded)="imageLoaded()"
+                  (loadImageFailed)="loadImageFailed()"
+              ></image-cropper>
+
+                 <span class="result rounded" *ngIf="data1.image">
+                     <img [src]="croppedImage">
+                </span>
+
+              </figure>
+            
+            <img [src]="croppedImage"/>
+            
+            </div>
+            <div class="upload-btn" *ngIf="uploadimg">
+              <a href="javascript:;">Upload image</a>
+              <input #fileInput type='file' accept="image/x-png,image/jpg,image/jpeg" formControlName="icon" [(ngModel)]="userInfo.icon"
+                name="profile_pic" (change)="fileChangeEvent($event)">
+                
+            </div>
+            <div class="outer">
+            <div class="upload-btn" *ngIf="upload">
+              <a href="javascript:;" (click)="previewClose()">Save</a>
+              
+            </div>
+            <div class="upload-btn" *ngIf="edit" >
+              <a href="javascript:;" (click)="previewOpen()">Edit</a>
+             
+            </div>
+            </div>
+        
+            <p>Minimum 600x600 px. Max 20MB</p>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1 post-form">
+            <div class="form-group">
+              <label>POST TITLE</label>
+              <span class="count"><small class="form-text text-muted"><code>{{title.value.length}}</code> / <code>{{150}}</code> characters</small></span>
+              <input type="text" formControlName="title" [(ngModel)]="userInfo.title" maxlength="150" class="form-control" #title />
+              <span *ngIf="!postForm.get('title').valid && postForm.get('title').touched" class="required-text">Please provide title.</span>
+
+            </div>
+            <div class="form-group">
+              <label>DESCRIPTION</label>
+              <span class="count"><small class="form-text text-muted"><code>{{description.value.length}}</code> / <code>{{2200}}</code> characters</small></span>
+              <textarea formControlName="description" [(ngModel)]="userInfo.description" maxlength="2200" class="form-control" #description></textarea>
+              <span *ngIf="!postForm.get('description').valid && postForm.get('description').touched" class="required-text">Please provide description.</span>
+
+            </div>
+            <div class="clearfix">
+              <div class="col-50">
+                <div class="form-group">
+                  <label>PRIMARY GENRE</label>
+                  <select [(ngModel)]="userInfo.genre" class="form-control" formControlName="genre">
+                      <option value="0" >Select Genre</option>
+                    <option *ngFor="let genres of genres" value="{{genres.name}}">
+                       {{genres.name}}
+                     </option>
+                   </select>
+                  <!-- <select formControlName="genre" [(ngModel)]="userInfo.genre" class="form-control">
+                    <option value="0">Select Genre</option>
+                    <option value="1">Hiphop/rap</option>
+                    <option value="2">Alternative</option>
+                    <option value="3">Soul</option>
+                  </select> -->
+                  <span *ngIf="!postForm.get('genre').valid && postForm.get('genre').touched" class="required-text">Required Field</span>
+
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="form-group">
+                  <label>TYPE</label>
+                  <select formControlName="genre_type" [(ngModel)]="userInfo.genre_type" class="form-control">
+                    <option [selected]="true">Select Type</option>
+                    <option value="single">Single</option>
+                    <option value="album">Album</option>
+                    <option value="ep">EP</option>
+                    <option value="mixtape">Mixtape</option>
+                    <option value="video">Video</option>
+                    <option value="image">Image</option>
+                    <option value="episode">Episode</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span *ngIf="!postForm.get('genre_type').valid && postForm.get('genre_type').touched" class="required-text">Required Field</span>
+
+                </div>
+              </div>
+            </div>
+            <div class="clearfix pad-top20">
+              <div class="col-50">
+                <div class="form-group">
+                  <label>PRIVACY</label>
+                  <p>Who can see this post?</p>
+                  <select formControlName="privacy" class="form-control" [(ngModel)]="userInfo.privacy">
+                    <!-- <option value="0">Select Privacy</option> -->
+                    <option value="public" [selected]="true">Public</option>
+                    <option value="allsubscriber">All Subscriber Levels</option>
+                    <option value="onedollar">$1+ Level Subscribers</option>
+                    <option value="fifteendollar">$15+ Level Subscribers</option>
+                    <option value="thirtydollar">$30+ Level Subscribers</option>
+                    <option value="hundreddollar">$100+ Level Subscribers</option>
+
+                  </select>
+
+                </div>
+                <span *ngIf="!postForm.get('privacy').valid && postForm.get('privacy').touched" class="required-text">Required Field</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="post-subscribe">
+              <h6>Do you want to charge your subscribers for this post?</h6>
+              <div class="pad-top15">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" value="yes" formControlName="charge" class="custom-control-input" [checked]="true">
+                  <label class="custom-control-label" for="customRadioInline1">Yes,
+                    <span>12 subscribers currently subscribing a total of $75,00.</span>
+                  </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" value="no" formControlName="charge" [(ngModel)]="userInfo.charge" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">No,
+                    <span>this is a free post.</span>
+                  </label>
+                </div>
+                <span *ngIf="!postForm.get('charge').valid && postForm.get('charge').touched" class="required-text">Required Field</span>
+
+              </div>
+
+
+              <div class="post-btn">
+                <button class="btn pink-bg" type="submit">Post</button>
+                <button class="btn" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+              </div>
+
+              <p>
+                <span>IMPORTANT:</span> By sharing, you confirm your posts and sounds comply
+                <br> with our
+                <a href="javascript:;">Terms of Use</a> and don’t infringe on anyone’s rights.</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /Dashboard Content -->
+</main>
+<!-- /Main Content -->
+
+
+
+<app-footer></app-footer>
