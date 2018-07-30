@@ -33,8 +33,8 @@
 			  <div class="col-md-12 col-lg-9 right_border">
 					<h2 class="sub_title">Here is the list of your current posts. <a href="/create-post" class="btn btn-dark">+ NEW POST</a></h2>
 
-			 <div class="table-responsive custom_table">
-				<table class="table">
+			 <div class=" custom_table">
+				<!-- <table class="table">
 				<thead>
 					<tr>
 						<th>Posts</th>
@@ -70,7 +70,43 @@
 							</tr>
 						
 						</tbody>
-				</table>	
+				</table>	 -->
+				<p-dataTable #tb class="table" [value]="lists" emptyMessage="No Result Found!!" [rows]="limit" [pageLinks]="totalCount"
+				sortField="_id" sortOrder="-1" [paginator]="true" [globalFilter]="gb" #dt>
+				<p-column field="icon" header="Posts" [style]="{'width':'`100px'}" filterMatchMode="equals">
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						<span class="image_box"><img src="{{row.icon}}" alt="Cover Image"/></span>
+				</ng-template>
+				</p-column>
+				<p-column field="title" header="" [style]="{'width':'225px'}" filterMatchMode="equals">
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						<p >{{row.title}} <small>Everyone - {{row.formattedDate}}</small></p>
+				</ng-template>
+				</p-column>
+				<p-column field="Views" header="Views" [style]="{'text-align':'center'}" filterMatchMode="equals">
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						0
+				</ng-template>
+				</p-column>
+				<p-column field="Likes" header="Likes" [style]="{'text-align':'center'}"  class="text-wrap-break">
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						0
+				</ng-template>
+				</p-column>
+				<p-column field="Comments" header="Comments" [style]="{'text-align':'center'}"  class="text-wrap-break" >
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						0
+				</ng-template>
+				</p-column>
+				<p-column field="title" header="" [style]="" filterMatchMode="equals">
+					<ng-template let-col let-row="rowData" pTemplate type="body">
+						<em class="icons"><a href="javascript:;" (click)="editPosts(row._id)"><img src="../../assets/images/Edit.png" alt="Edit Image"/></a>
+							<a href="javascript:;" (click)="deletePosts(row._id)"><img src="../../assets/images/Trash.png" alt="Trash Image"/></a></em>
+				</ng-template>
+				</p-column>
+		</p-dataTable>
+				<!-- <p-paginator [rows]="limit" [totalRecords]="totalCount" (onPageChange)="paginate($event)"></p-paginator> -->
+				
 			 </div>
 
 			  </div>
@@ -110,7 +146,7 @@
 			  <div class="col-md-12 col-lg-9 right_border">
 					<h2 class="sub_title">Here is the list of your current posts. <a href="#" class="btn btn-dark">+ NEW POST</a></h2>
 
-			 <div class="table-responsive custom_table">
+			 <div class=" custom_table">
 				<table class="table">
 				<thead>
 					<tr>

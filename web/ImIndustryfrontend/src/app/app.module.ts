@@ -15,8 +15,8 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CookieModule } from 'ngx-cookie';
-import {GrowlModule} from 'primeng/primeng';
-import {ConfirmDialogModule, ConfirmationService} from 'primeng/primeng';
+import { GrowlModule} from 'primeng/primeng';
+import { ConfirmDialogModule, ConfirmationService} from 'primeng/primeng';
 import { ImageCropperComponent, CropperSettings } from 'ng2-img-cropper';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { NgxCropperModule } from 'ngx-cropper';
@@ -32,6 +32,11 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { ManagePostComponent } from './manage-post/manage-post.component';
 import { Session } from "./helper/session";
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { PaginatorModule} from 'primeng/paginator';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
+import { CreateTrackComponent } from './create-track/create-track.component';
+import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { ArtistViewComponent } from './artist-view/artist-view.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,10 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     LeftBarComponent,
     ResetPasswordComponent,
     ManagePostComponent,
-    EditPostComponent
+    EditPostComponent,
+    CreateTrackComponent,
+    AccountSettingComponent,
+    ArtistViewComponent,
   ],
   imports: [
     FormsModule,
@@ -65,6 +73,8 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     CookieModule.forRoot(),
     GrowlModule,
     ConfirmDialogModule,
+    PaginatorModule,
+    DataTableModule
   ],
   providers: [AuthGaurdService,AllAuthService,Session,LoginService,ConfirmationService],
   bootstrap: [AppComponent]

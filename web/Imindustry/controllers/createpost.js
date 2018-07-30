@@ -225,7 +225,7 @@ exports.genreList = function (req, res) {
     let _this = this;
     let outputJSON = "";
     let pageNo = req.params.pageNo || 1;
-    let count = 9;
+    let count = 12;
     let skipNo = (pageNo - 1) * count;
     GenreSchema.find({
         is_deleted: false,
@@ -399,5 +399,34 @@ exports.gettypeslist = function (req, res) {
     })
 }
 
-
+exports.edit_post = function (req,res){
+    let outputJson = "";
+    let reqData = req.body
+    
+    if(reqData._id){
+        reqData.video = reqData.video?reqData.video:undefined
+        postSchema.findOneAndUpdate({_id:reqData._id},reqData,{new:true},function(err,result){
+            if(err){
+                    outputJson = {
+                        status: 400,
+                        msg: "something went wrong"
+                    }
+                    res.json(outputJson);
+            }else{
+                console.log(result,'resullttttt')
+                outputJson = {
+                    status: 200,
+                    data: result
+                }
+                res.json(outputJson);
+            }
+        })
+    }else{
+        outputJson = {
+            status: 400,
+            msg: "Required field missing"
+        }
+        res.json(outputJson);
+    }
+}
 

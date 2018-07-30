@@ -12,6 +12,7 @@ import { ImageCropperComponent, CropperSettings, Bounds } from 'ng2-img-cropper'
 import { forEach } from '@angular/router/src/utils/collection';
 import * as AWS from 'aws-sdk';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { Http, ResponseContentType } from '@angular/http';
 
 //New Image uploader
 
@@ -93,6 +94,10 @@ export class CreatePostComponent implements OnInit {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   previewClass : any ='image-cropper-open';
+  invalidVideoError:boolean = false;
+  invalidVideoMessage: any = '';
+  hideCropper: boolean= false;
+
   @ViewChild('cropper', undefined)
   cropper: ImageCropperComponent;
   constructor(
@@ -101,9 +106,12 @@ export class CreatePostComponent implements OnInit {
     private _service: PostService,
     private toastr: ToastrService,
     private sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private http : Http
 
   ) {
+
+
     this.cropperSettings1 = new CropperSettings();
     this.cropperSettings1.width = 200;
     this.cropperSettings1.height = 200;
@@ -118,6 +126,8 @@ export class CreatePostComponent implements OnInit {
     this.cropperSettings1.minHeight = 100;
 
     this.cropperSettings1.rounded = false;
+    this.cropperSettings1.keepAspect = true;  // new
+    this.cropperSettings1.preserveSize = false; //new
     this.cropperSettings1.noFileInput = true;
     this.cropperSettings1.cropperDrawSettings.strokeColor = 'rgba(255,255,255,1)';
     this.cropperSettings1.cropperDrawSettings.strokeWidth = 2;
@@ -132,6 +142,7 @@ export class CreatePostComponent implements OnInit {
     this.userInfo.privacy = "0";
     this.userInfo.charge = "yes";
     this.userInfo.user_id = '';
+
     this.postForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
@@ -141,20 +152,18 @@ export class CreatePostComponent implements OnInit {
       music_audio: [''],
       video: [''],
       icon: [''],
-      charge: [''],
-
+      charge: ['']
     })
+    
     this.uploader.onAfterAddingFile = f => {
       f.withCredentials = false;
       const lastValue = this.uploader.queue.slice(-1)[0];
       this.fileData = lastValue;
       this.uploadAudio(this.fileData);
     };
-
       //get genre
          this.getGenre();
       //get genre type
-
   }
 
   closeVideoPreview()
@@ -163,49 +172,65 @@ export class CreatePostComponent implements OnInit {
   }
 
   pasteUrl(e){
-    
-    this.url = e.clipboardData.getData('Text');
-    
-    this.embedUrl= this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    this.preview = true; 
-    this.userInfo.video = this.url;
-    let image = "http://img.youtube.com/vi/"+this.url+"/hqdefault.jpg";
-    this.getImage(image);
-    //console.log("you tube",this.image)
-   }
 
-   getImage(image)
-   {
-    // var reader = new FileReader();
-    // reader.onloadend = function(evt) {
-    //     console.log("read success");
-    //     console.log(evt.target.result);
-    // };
-    // reader.readAsDataURL(image);
-    var xhr = new XMLHttpRequest()
-    xhr.open("GET", image);
-    xhr.responseType = "blob";
-    xhr.send();
-    var image;
-    xhr.addEventListener("load", function() {
-        var reader = new FileReader();
+    var url = e.clipboardData.getData('Text');
+   
+    if (url != undefined || url != '') {        
+
+        var regExp = /^(http:\/\/|https:\/\/)(vimeo\.com|youtu\.be|www\.youtube\.com)\/([\w\/]+)([\?].*)?$/;
+        var match = url.match(regExp);
        
-        reader.readAsDataURL(xhr.response); 
-        reader.addEventListener("loadend", function() {      
-            image = reader.result;       
-           console.log("image1", image)
-            // this.upload = true;
-            // this.uploadimg = false;
-            // this.upload = true;
-            // this.edit = true;
-        });
-        
-    });
- // console.log("image",image)
- //   this.uploadImage(image);
+        if (match) {
+
+             // Do anything for being valid
+             // if need to change the url to embed url then use below line          
+             // $('#videoObject').attr('src', 'https://www.youtube.com/embed/' + match[2] + '?autoplay=1&enablejsapi=1');  
+             switch(match[2]){
+               case 'www.youtube.com':
+                 if(match[3] == 'watch'){
+                   var youtube_id =match[4].split('=')[1];
+                   this.embedUrl = 'https://www.youtube.com/embed/' +youtube_id;
+                   this.croppedImage = "https://img.youtube.com/vi/"+youtube_id+ "/default.jpg"
+                 }else{
+                  this.embedUrl = url
+                 }
+                 break;
+                 
+               case 'youtu.be':
+                   var youtube_id =match[3];
+                 this.embedUrl = 'https://www.youtube.com/embed/' +youtube_id;
+                 this.croppedImage = "https://img.youtube.com/vi/"+youtube_id+ "/default.jpg"
+                 break;
+
+                case 'vimeo.com':
+                  let vimeo_id =match[3];
+                  this.embedUrl = 'https://player.vimeo.com/video/' +vimeo_id;
+                  this.croppedImage = "https://res.cloudinary.com/demo/image/vimeo/c_thumb,g_face,w_200,h_220/"+vimeo_id+ ".jpg"
+                  break;
+             }
+             this.embedUrl=  this.sanitizer.bypassSecurityTrustResourceUrl(this.embedUrl);
+             this.postForm.controls['video'].patchValue(url);
+            
+             this.hideCropper = true
+             this.uploadimg = true
+             this.upload = false
+             this.edit = false
+             this.userInfo.video = url;
+             this.preview = true; 
+             this.invalidVideoError = false;
+             this.invalidVideoMessage = "";
+
+        } else {
+         
+          this.invalidVideoError = true;
+          this.invalidVideoMessage = "Invalid link to upload,";
+            // Do anything for not being valid
+        }
+    }
+ 
    }
 
-
+   
   getGenre(){
     this._service.genrelist().then(res => {
       if (res.status == 200) {
@@ -220,9 +245,9 @@ export class CreatePostComponent implements OnInit {
   }
 
   uploadAudio(file): void {
-    // debugger;
-    AWS.config.accessKeyId = 'AKIAIUA2EI3XKGFHVE3Q';
-    AWS.config.secretAccessKey = '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';
+
+    AWS.config.accessKeyId = 'AKIAJSGLATCQTV4W2U7A';
+    AWS.config.secretAccessKey = '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';
     AWS.config.region = 'us-east-1';
     let bucket = new AWS.S3({ params: { Bucket: 'iati-audio' } });
     let params = { Bucket: 'iati-audio', Key: 'audio/' + file._file.name, ACL: 'public-read', Body: file._file };
@@ -242,9 +267,9 @@ export class CreatePostComponent implements OnInit {
   }
 
   uploadImage(cropImage): void {
-   
-    AWS.config.accessKeyId = 'AKIAIUA2EI3XKGFHVE3Q';
-    AWS.config.secretAccessKey = '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';
+    
+    AWS.config.accessKeyId = 'AKIAJSGLATCQTV4W2U7A';
+    AWS.config.secretAccessKey = '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';
     AWS.config.region = 'us-east-1';
     const bucket = new AWS.S3({ params: { Bucket: 'iati-image' } });
    
@@ -269,16 +294,15 @@ export class CreatePostComponent implements OnInit {
       
       self.isImageUrl = true;
       self.imageUrl = data.Location;
- 
-      // self.imagepath = this.imageTypeName;
-      // self.crop_image = this.data1.image;
       self.userInfo.icon = self.imageUrl;
-      this.userInfo.icon = self.imageUrl;
+      // this.userInfo.icon = self.imageUrl;
       
     });
   }
 
+
   removeFile(item, itemName) {
+   
     if (itemName) {
       let indexDoc = this.docsArray.indexOf(itemName);
       this.docsArray.splice(indexDoc, 1);
@@ -286,6 +310,7 @@ export class CreatePostComponent implements OnInit {
     } else {
       item.remove();
     }
+
   }
 
 
@@ -325,13 +350,13 @@ export class CreatePostComponent implements OnInit {
 
 
   submitpost(userInfo) {
-  
     this.post_submission_error();
     let _this = this;
     let data = JSON.parse(localStorage.getItem('user_login'));
     
     this.userInfo.user_id = data._id;
     if (_this.postForm.valid) {
+      this.userInfo.icon = this.croppedImage?this.croppedImage:this.userInfo.icon
       this.busy = this._service.create_post(this.userInfo).then(function (data) {
         if (data.status == 200) {
 
@@ -349,16 +374,18 @@ export class CreatePostComponent implements OnInit {
     fileChangeEvent(event: any): void {
      
        this.imageChangedEvent = event;
+       this.uploadimg = false
+       this.upload = true
+       this.edit = true
+       this.hideCropper = false
     }
     imageCropped(image: string) {
         this.croppedImage = image;
-        // console.log(this.croppedImage)
         this.uploadImage(this.croppedImage);
         this.upload = true;
         this.uploadimg = false;
         this.upload = true;
         this.edit = true;
-       // console.log(this.croppedImage)
     }
     imageLoaded() {
         // show cropper
@@ -370,12 +397,18 @@ export class CreatePostComponent implements OnInit {
       this.previewClass = "image-cropper-close";
       this.upload = false;
       this.edit = true;
+      this.hideCropper = true
     }
     previewOpen(){
       this.previewClass = "image-cropper-open";
+      this.hideCropper = false
       this.upload = false;
       this.edit = false;
       this.uploadimg = true;
+    }
+    reset()
+    {
+      this.postForm.reset();
     }
   }
 

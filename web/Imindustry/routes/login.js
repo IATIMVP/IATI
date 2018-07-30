@@ -42,6 +42,10 @@ userRoutes.get('/validateUser/:email', (req, res) => {
     userAuth.validateUser(req, res);
 })
 
+userRoutes.post('/checkUser', (req, res) => {
+    userAuth.VerifyUser(req, res);
+})
+
 userRoutes.post('/create', (req, res) => {
     userPost.create(req, res);
 })
@@ -106,4 +110,14 @@ userRoutes.post('/deletePost', (req, res) => {
 userRoutes.get('/logout/:email', (req, res) => {
     userAuth.logout(req, res);
 })
+userRoutes.post('/edit_post', (req, res) => {
+    userPost.edit_post(req, res);
+})
+
+userRoutes.post('/updatePassword', (req, res) => {
+    userAuth.updatePassword(req, res);
+})
+
+
+
 module.exports = userRoutes;

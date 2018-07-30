@@ -79,4 +79,11 @@ export class LoginService {
     }
   }
 
+  updatePassword(userInfo)
+  {
+    return this.http.post(`${this.BASE_URL}user/updatePassword`, { userInfo }).
+    toPromise().then((res: Response) => res.json());
+
+  }
+
 }

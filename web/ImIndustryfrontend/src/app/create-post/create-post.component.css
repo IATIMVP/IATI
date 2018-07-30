@@ -9,8 +9,9 @@ bootstrap.css:2428
     background-color: #ff52a5 !important;
     border-color: #ffffff !important;
 }
-.image-cropper-close{display:none !important;    height: 174px;}
-.image-cropper-open{display:block !important;    height: 174px;}
+/* .image-cropper-close{display:none !important;    height: 174px;} */
+/* .image-cropper-open{display:block !important;    height: 174px;} */
+
 
 .song-upload-frame i.fa-trash-alt{vertical-align:top;padding:10px;cursor:pointer}
 .light-gray-bg{position:relative}
@@ -32,7 +33,9 @@ bootstrap.css:2428
     height: 174px !important;
     width: 100% !important;
   }
-  .source-image{
+  :host /deep/ .source-image{ height:100% !important;  width:100% !important; }
 
-    height:168px !important;
+  .error-link{
+    margin-left: 43%;
+    color: red;
   }

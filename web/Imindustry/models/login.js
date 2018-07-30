@@ -51,7 +51,14 @@ const Users = mongoose.Schema({
         type: String,
         default: 0
     },
-    address: [],
+    address: {
+        type: String,
+        default: 0
+    },
+    address1: {
+        type: String,
+        default: 0
+    },
     created_date: {
         type: Date,
         default: Date.now()
@@ -68,7 +75,8 @@ const Users = mongoose.Schema({
         type: String,
         default: 'user'
     },
-    type: String //1-normal,2-facebook,3-google
+    type: String, //1-normal,2-facebook,3-google
+    social_id: String 
 });
 
 Users.methods.setPassword = function (password) {

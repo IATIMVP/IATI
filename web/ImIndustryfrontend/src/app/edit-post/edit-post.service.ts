@@ -24,5 +24,15 @@ export class EditPostService {
     return this.http.get(`${this.BASE_URL}user/deletePost/${id}`).
       toPromise().then((res: Response) => res.json());
   }
-
+  edit_post(data){
+    console.log("chek data",data)
+    return this.http.post(`${this.BASE_URL}user/edit_post`,data).
+      toPromise().then((res: Response) => res.json());
+  }
+  genrelist() {
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+    const url = `${this.BASE_URL}user/getgenrelist`;
+    return this.http.get(url, options).toPromise().then((res: Response) => res.json());
+}
 }

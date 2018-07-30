@@ -65,11 +65,11 @@
 
             <div *ngIf="preview" class="light-gray-bg m-height125 song-upload-frame embed-link">
               <button (click)="closeVideoPreview()" class="closebutton">x</button>
-               <iframe style="margin-left: 28%;margin-bottom:26px;" width="250" height="150" [src]="embedUrl">
+               <iframe style="margin-left: 33%;margin-bottom:26px;" width="250" height="150" [src]="embedUrl">
                </iframe>
-            
+               <!-- {{postForm.value.video}}++ -->
                <div class="link-box">
-                 <input type="text" class="form-control"  (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>"  />
+                 <input type="text" class="form-control" formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>"  />
                </div>
              </div>
             
@@ -77,8 +77,10 @@
              
               <p>You have the option to embed a URL instead.</p>
               <div class="link-box">
-                <input type="text" class="form-control" formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>" />
+                  <!-- {{postForm.value.video}}+ -->
+                <input type="text" class="form-control" formControlName="video" (paste)="pasteUrl($event)" placeholder="Copy and paste an embeddable URL here (Youtube or Vimeo) </>" />
               </div>
+              <span *ngIf="invalidVideoError" class="error-link">Invalid Format !!</span>
             </div>
 
             <div class="required-text">
@@ -90,12 +92,13 @@
           <div class="col-sm-12 col-md-6 col-lg-4 cover-photo">
             <div class="post-cover-image">
               <p>COVER IMAGE*</p>
-              <figure>
+              <!-- {{hideCropper}}+ -->
+              <figure *ngIf="hideCropper != true" style="height:175px">
                   <image-cropper
                   class={{previewClass}}
                   [imageChangedEvent]="imageChangedEvent"
                   [maintainAspectRatio]="true"
-                  [aspectRatio]="3 / 3"
+                  [aspectRatio]="4 / 3"
                   [resizeToWidth]="128"
                   format="png"
                   (imageCropped)="imageCropped($event)"
@@ -109,7 +112,7 @@
 
               </figure>
             
-            <img [src]="croppedImage"/>
+            <img *ngIf="croppedImage" class='imgSize' [src]="croppedImage"/>
             
             </div>
             <div class="upload-btn" *ngIf="uploadimg">
@@ -234,7 +237,7 @@
 
               <div class="post-btn">
                 <button class="btn pink-bg" type="submit">Post</button>
-                <button class="btn" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+                <button class="btn" type="button" data-toggle="modal" (click)="reset()" data-target="#cancelModal">Cancel</button>
               </div>
 
               <p>

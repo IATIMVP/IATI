@@ -120,7 +120,7 @@ export class LoginComponent implements OnInit {
         this.service.login(data).then(
           (res: any) => {
             if (res.status == 400 || res.status == 200) {
-             // localStorage.setItem('id', res.data._id);
+              localStorage.setItem('id', res.data._id);
               this.service.setSession(res.data);
               
               this.zone.run(() => {

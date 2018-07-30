@@ -18,7 +18,9 @@ export class DashboardComponent implements OnInit {
   url:any;
   lists: any = [];
   msgs: Message[];
-
+  totalCount;
+  limit = 10;
+  pageNo = 1;
   constructor( private _service: DashboardService,private router: Router,private datePipe: DatePipe,private confirmationService: ConfirmationService,
     private toastr: ToastrService) {
 
@@ -48,7 +50,8 @@ export class DashboardComponent implements OnInit {
             }         
             
             this.lists = newarr;
-           
+            this.totalCount = this.lists.length
+           console.log(this.totalCount,'totallcount')
            }
 
            else{
@@ -57,7 +60,18 @@ export class DashboardComponent implements OnInit {
 
           })
       }
-    
+      // paginate(event) {
+      //   console.log(event, 'page')
+      //   this.pageNo = event.page + 1
+      //   this.listingPosts()
+      // }
+      paginate(event) {
+        console.log(event,'eventtt')
+        // event.first = Index of the first record
+        //event.rows = Number of rows to display in new page
+        //event.page = Index of the new page
+        //event.pageCount = Total number of pages
+    }
       deletePosts(id){
          this.confirmationService.confirm({
            message: 'Are you sure to delete Post?',

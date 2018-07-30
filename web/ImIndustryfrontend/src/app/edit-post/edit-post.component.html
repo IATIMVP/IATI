@@ -25,21 +25,22 @@
               <p class="text-center">1GB Max File Size / 2GB Total Storage
                 <br> Supported file types: WAV, MP3, AIF, FLAC, AAC</p>
             </div>
-
+            <!-- {{uploader.queue.length}}+ -->
             <div class="light-gray-bg m-height125 song-upload-frame"  *ngIf="uploader.queue.length > 0" >
                
               <table class="table">
                 <tbody [dragula]='"bag-one"' [dragulaModel]='uploader.queue'>
                   <tr *ngFor="let item of uploader.queue;let i = index">
+                    <!-- {{item.file}}+ -->
                     <td>
                       <strong>
                         <i class="fas fa-bars"></i>
-                        {{item.file.name}}
+                        <!-- {{item.file.name}} -->
                       </strong><br>
                       <audio controls controlsList="nodownload"> <source src="https://iati-audio.s3.amazonaws.com/audio/{{item.file.name}}"> </audio>
                       <!-- <i class="fas fa-play" (click)="playSound(item)"></i>
                       <i class="fas fa-stop" (click)="stopSound(i)"></i> -->
-                      <i class="fas fa-trash-alt" style="margin-left:14px" (click)="removeFile(item,item.newName)"></i>
+                      <i class="fas fa-trash-alt" style="margin-left:14px" (click)="removeFile(item,i)"></i>
                     </td>
                     <td *ngIf="uploader.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
                     <td *ngIf="uploader.isHTML5">
@@ -65,20 +66,21 @@
 
             <div *ngIf="preview" class="light-gray-bg m-height125 song-upload-frame embed-link">
               <button (click)="closeVideoPreview()" class="closebutton">x</button>
-               <iframe style="margin-left: 28%;margin-bottom:26px;" width="250" height="150" [src]="embedUrl">
+               <iframe style="margin-left:33%;margin-bottom:26px;" width="250" height="150" [src]="embedUrl">
                </iframe>
             
                <div class="link-box">
-                 <input type="text" class="form-control"  (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>"  />
+                 <input type="text" class="form-control"  formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>"  />
                </div>
              </div>
-            
+             <!-- {{userInfo.video}}+ -->
             <div *ngIf="uploader.queue.length == 0 && !preview" class="light-gray-bg m-height125 song-upload-frame embed-link">
              
               <p>You have the option to embed a URL instead.</p>
               <div class="link-box">
-                <input type="text" class="form-control" formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>" />
+                <input type="text" class="form-control"  formControlName="video" (paste)="pasteUrl($event)" placeholder="Enter an embeddable URL here (Youtube or Vimeo) </>" />
               </div>
+              <span *ngIf="invalidVideoError" class="error-link">Invalid Format !!</span>
             </div>
 
             <div class="required-text">
@@ -90,8 +92,10 @@
           <div class="col-sm-12 col-md-6 col-lg-4 cover-photo">
             <div class="post-cover-image">
               <p>COVER IMAGE*</p>
-              <figure>
+              <!-- {{imageChangedEvent}}+ -->
+              <figure *ngIf=imageChangedEvent style="height:175px">
                   <image-cropper
+                  
                   class={{previewClass}}
                   [imageChangedEvent]="imageChangedEvent"
                   [maintainAspectRatio]="true"
@@ -119,7 +123,7 @@
             
             
             
-            <img [src]="croppedImage" />
+            <img class='imgSize' [src]="croppedImage" />
             
             </div>
             <div class="upload-btn" *ngIf="uploadimg">
@@ -233,7 +237,7 @@
               <h6>Do you want to charge your subscribers for this post?</h6>
               <div class="pad-top15">
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="customRadioInline1" value="yes" formControlName="charge" class="custom-control-input" [checked]="true">
+                  <input type="radio" id="customRadioInline1" value="yes" formControlName="charge" [(ngModel)]="userInfo.charge" class="custom-control-input" >
                   <label class="custom-control-label" for="customRadioInline1">Yes,
                     <span>12 subscribers currently subscribing a total of $75,00.</span>
                   </label>
@@ -250,8 +254,8 @@
 
 
               <div class="post-btn">
-                <button class="btn pink-bg" type="submit">Post</button>
-                <button class="btn" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+                <button class="btn pink-bg" type="submit">Update</button>
+                <button class="btn" type="button" (click)="cancel()">Cancel</button>
               </div>
 
               <p>

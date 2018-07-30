@@ -2,6 +2,7 @@ const express = require('express');
 const Users = require('./../models/login');
 const jwt = require('jsonwebtoken');
 const config = require('./../config/config.json');
+const crypto = require('crypto');
 const moment = require('moment');
 var passport = require('passport');
 var fs = require('fs');
@@ -9,8 +10,7 @@ var path = require('path');
 var emailService = require('./../service/emailService.js');
 var formidable = require('formidable');
 var async = require('async');
-
-
+var easyimg = require("easyimage");
 
 function generateToken(email) {
     const token = config.token;
@@ -123,12 +123,14 @@ exports.register = function (req, res) {
      let form = new formidable.IncomingForm();
      form.keepExtensions = true; //keep file extension
      form.uploadDir = process.env.PWD + '/public/media/users';
+     var dst_small= process.env.PWD + '/public/media/users/small';
+     var dst_medium = process.env.PWD + '/public/media/users/medium';
      form.multiples = true;
      var arrfile = [];
      var multipleAudio = [];
      let users = new Users();
      form.parse(req, function (err, fields, files) {
-        
+       
              var arrfile = [];
                    var lastslashindex = files.file.path.lastIndexOf('/');
                    var imageName = files.file.path.substring(lastslashindex  + 1);
@@ -148,8 +150,41 @@ exports.register = function (req, res) {
                        
                        var fileType = resp.type;
                        fileType = fileType.split('/');
+
+                    // for smallImage
+                       easyimg.rescrop({
+                        src: files.file.path, dst: dst_small + '/' + imageName,
+                        width: 100, height: 100,
+                        cropwidth: 100, cropheight: 100,
+                        x: 0, y: 0
+                    }).then(
+                        function (image) {
+                            //  console.log('Resized and cropped: ' + image.width + ' x ' + image.height);
+                        },
+                        function (err) {
+                            //  console.log(err);
+                        }
+                        );
+        
+        
+                    // for largeImage
+                    easyimg.rescrop({
+                        src: files.file.path, dst: dst_medium + '/' + imageName,
+                        width: 300, height: 300,
+                        cropwidth: 300, cropheight: 300,
+                        x: 0, y: 0
+                    }).then(
+                        function (image) {
+                            //  console.log('Resized and cropped: ' + image.width + ' x ' + image.height);
+                            // return res.json({ status: 200, msg: 'Uploaded images', data: image });
+        
+                        },
+                        function (err) {
+                            return res.json({ status: 500, msg: err });
+                        }
+                        );
                       
-                       var baseImageUrl = path.join('/media/users/', imageName);
+                       var baseImageUrl = path.join('/media/users/small/', imageName);
            
                        fields.picture = baseImageUrl;
                      
@@ -264,7 +299,7 @@ module.exports.Weblogin = function (req, res) {
     let outputJSON = "";
    
    // req.body= { email: req.body.data.email, password: req.body.data.password };
-    console.log("request=>",req)
+    // console.log("request=>",req)
     passport.authenticate('local', function (err, user, info) {
       
         // If Passport throws/catches an error
@@ -333,36 +368,36 @@ module.exports.checkSocialSignup = function (req, res) {
     let users = new Users();
     let outputJSON = "";
 
-        Users.findOne({ token: req.body.token, type: req.body.type}, function (err, resp) {
+        Users.findOne({ social_id: req.body.userId, type: req.body.type}, function (err, resp) {
            
                 if (resp != null || resp != undefined) {
                     outputJson = {
                         status: 200,
-                        data: true
+                        data: resp
                     }
                     return res.json(outputJson);
                         
                         
                 } else {
                     outputJson = {
-                        status: 200,
+                        status: 201,
                         data: false
                     }
                     return res.json(outputJson);
                    
                 }
             })
-
-    
 };
 
 module.exports.SocialSignUp = function (req, res) {
+    
     let users = new Users();
     let outputJSON = "";
     let form = new formidable.IncomingForm();
+    form.keepExtensions = true; //keep file extension
     form.parse(req, function (err, fields, files) {
-        
-        Users.findOne({ token: fields.token}, function (err, resp) {
+       
+        Users.findOne({ social_id: fields.userId}, function (err, resp) {
            
                 if (resp != null || resp != undefined) {
                     outputJson = {
@@ -376,30 +411,37 @@ module.exports.SocialSignUp = function (req, res) {
                     var errorMessage = "";
                     var outputJSON = "";
                     var postModelObj = req.body;
-                
-                    directory = "./public/media/industryAudio/";
-                    fs.exists(directory, function (exists) {
-                        if (!exists) {
-                            fs.mkdir(directory, function (err) {
-                                if (err) {
-                                    res.send(500, err);
-                                } else {
 
-                                    var params ={
-                                        fields:fields,
-                                        files:files
-                                    }
-                                    saveSocialUser(params, res);
-                                }
-                            });
-                        } else {
-                                var params ={
-                                    fields:fields,
-                                    files:files
-                                }
-                                saveSocialUser(params, res);
-                        }
-                    });
+                    var params ={
+                        fields:fields,
+                        files:files
+                    } 
+                    
+                    saveSocialUser(params, res);
+                
+                    // directory = "./public/media/industryAudio/";
+                    // fs.exists(directory, function (exists) {
+                    //     if (!exists) {
+                    //         fs.mkdir(directory, function (err) {
+                    //             if (err) {
+                    //                 res.send(500, err);
+                    //             } else {
+
+                    //                 var params ={
+                    //                     fields:fields,
+                    //                     files:files
+                    //                 }
+                    //                 saveSocialUser(params, res);
+                    //             }
+                    //         });
+                    //     } else {
+                    //             var params ={
+                    //                 fields:fields,
+                    //                 files:files
+                    //             }
+                    //             saveSocialUser(params, res);
+                    //     }
+                    // });
                 }
             })
     })
@@ -408,45 +450,30 @@ module.exports.SocialSignUp = function (req, res) {
 
 
 var saveSocialUser = function (req, res) {
-
+    
     let _this = this;
-    let form = new formidable.IncomingForm();
-    form.keepExtensions = true; //keep file extension
-    form.uploadDir = process.env.PWD + '/public/media/users';
-    form.multiples = true;
-    var arrfile = [];
-    var multipleAudio = [];
     let users = new Users();
-
     let files = req.files;
     let fields = req.fields;
-                          var arrfile = [];
-                          var lastslashindex = files.file.path.lastIndexOf('/');
-                          var imageName = files.file.path.substring(lastslashindex  + 1);
-                  
-                       
-                          if (!Array.isArray(files.file)) {
-                              arrfile.push(files.file);
-                          } else {
-                              arrfile = files.file;
-                          }
-                          var successData = [];
-                          var i = 0;
-                          var length = arrfile.length;
-                  
-                          async.map(arrfile, (resp, icb) => {
-                             
-                              var myfile = resp.path.split('/');
-                              
-                              var fileType = resp.type;
-                              fileType = fileType.split('/');
-                             
-                              var baseImageUrl = path.join('/media/users/', imageName);
-                  
-                              fields.picture = baseImageUrl;
-                            
-                  
-                          })
+    var uuidv4 = require('uuid/v4');
+    var imageName = 'upload_'+ uuidv4() + '.png'
+
+    var fs      = require('fs');
+    var request = require('request');
+    request.get({url: fields.file, encoding: 'binary'}, function (err, response, body) {
+    fs.writeFile(process.env.PWD + '/public/media/users/'+imageName, body, 'binary', function(err) {
+    if(err)
+    {
+        outputJson = {
+                              status: 400,
+                              message: err,
+                     }
+                          return res.json(outputJson);
+    }
+    else
+    {
+        var picture = "/media/users/"+imageName;
+
                           Users.findOne({ email: fields.email }, function (err, resp) {
                               if (resp != null || resp != undefined) {
                                   outputJson = {
@@ -460,14 +487,15 @@ var saveSocialUser = function (req, res) {
                                   }
                              
                                 let generes = "'"+ fields.preferred_genre + "'";
-                              
-                                  // fields.picture = baseImageUrl;
+                         
+                                  users.email = fields.email;
                                   users.email = fields.email;
                                   users.name = fields.name;
-                                  users.picture = fields.picture;
+                                  users.picture = picture;
                                   users.username = fields.username;
                                   users.type = fields.type;
                                   users.token = fields.token;
+                                  users.social_id= fields.userId;
                                  
                                   users.save(function (saveErr, savedata) {
                                       if (saveErr) {
@@ -486,6 +514,12 @@ var saveSocialUser = function (req, res) {
                                   })
                               }
                           })
+
+                 }
+    }); 
+});
+
+                        
 }
 
 exports.editAccount = function (req, res) {
@@ -635,7 +669,7 @@ module.exports.validateUser = (req, res) => {
     let email = req.params.email;
   
     Users.findOne({
-        email: email,
+        'email': email,
         is_deleted: false
     }, (err, resp) => {
         if (resp) {
@@ -657,6 +691,31 @@ module.exports.validateUser = (req, res) => {
     (req, res);
 }
 
+module.exports.VerifyUser = (req, res) => {
+  
+     Users.findOne({
+         $or: [ { 'email': req.body.name  }, { 'username': req.body.name }],
+
+         is_deleted: false
+     }, (err, resp) => {
+         if (resp) {
+ 
+             outputJSON = {
+                 status: 200,
+                 data: resp
+             }
+             res.status(200).send(outputJSON)
+         }
+         else {
+             outputJSON = {
+                 status: 201,
+                 data: false
+             }
+             res.status(201).send(outputJSON)
+         }
+     })
+    
+ }
 
 module.exports.forgot = function (req, res) {
     Users.findOne({
@@ -695,8 +754,6 @@ module.exports.forgot = function (req, res) {
     });
 }
 
-
-
 module.exports.logout = (req, res) => {
     let email = req.params.email;
     Users.update({
@@ -717,6 +774,37 @@ module.exports.logout = (req, res) => {
                 outputJSON = {
                     status: 201,
                     msg: 'Can not logout'
+                }
+                res.status(201).send(outputJSON)
+            }
+        })
+}
+
+module.exports.updatePassword = (req, res) => {
+   let userInfo = req.body.userInfo;
+   let password = userInfo.password;
+   let user_id = userInfo.user_id;
+   let salt = crypto.randomBytes(16).toString('hex');
+   let hash = crypto.pbkdf2Sync(password, salt, 1000, 64, 'sha1').toString('hex');
+    Users.update({
+        "_id": user_id
+    }, {
+            $set: {
+                "salt":salt,
+                "hash":hash
+            }
+        }, (err, resp) => {
+            if (resp) {
+                outputJSON = {
+                    status: 200,
+                    data: resp
+                }
+                res.status(200).send(outputJSON)
+            }
+            else {
+                outputJSON = {
+                    status: 201,
+                    msg: 'Error in  updating !!'
                 }
                 res.status(201).send(outputJSON)
             }
