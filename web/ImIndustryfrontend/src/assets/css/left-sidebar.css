@@ -1,0 +1,115 @@
+.left-sidebar{
+    width: 281px;
+    background-color: #242424;
+    float: left;
+    color: #bbb;
+    -webkit-transition: -webkit-transform .3s ease-in-out,width .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out,width .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out,width .3s ease-in-out;
+    transition: transform .3s ease-in-out,width .3s ease-in-out;
+
+}
+.sidebar-content {
+    padding: 20px 25px 10px;
+}
+.user-summary {
+    padding-bottom: 28px;
+}
+.user-summary span {
+    float: left;
+    width: 50px;
+    border-radius: 100%;
+}
+.user-summary span img {
+    display: block;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+.summary {
+    padding-left: 60px;
+}
+.user-summary h6 {
+    font-size: 1.167rem;
+    color: #f9f9f9;
+    margin-bottom: 2px;;
+}
+.user-summary small {
+    font-size: 1rem;
+}
+.summary p {
+    font-weight: 400;
+    line-height: 19px;
+    padding-top: 11px;
+    margin-bottom: 0;
+}
+.summary p span {
+    font-weight: 700;
+    float: none;
+    color: #fff;
+}
+
+.sidebar-content .bio {
+    font-size: 1.167rem;
+    font-weight: 600;
+    border-top: 1px solid #474747;
+    border-bottom: 1px solid #474747;
+    line-height: 22px;
+    padding: 17px 0 14px;
+    margin-bottom: 4px;
+}
+.sidebar-content .bio small {
+    font-size: 1rem;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    line-height: 17px;
+}
+.follower-content div {
+    float: left;
+    width: 100%;
+    font-size: 0.9167rem;
+    font-weight: 600;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+.follower-content .float-right {
+    color: #fff;
+}
+
+.left-sidebar ul {
+    list-style: none inside none;
+    margin: 11px 0  0;
+    padding: 0;
+    font-weight: 600;
+}
+.left-sidebar li {
+    font-size: 1.167rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #474747;
+}
+.left-sidebar li a {
+    color: #fff;
+    padding: 19px 24px 20px;
+    display: block;
+}
+.left-sidebar li a:hover, .left-sidebar li.active a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #474747;
+}
+@media (max-width: 767px) {
+    .left-sidebar {    
+        position: absolute; left: 0; top: 65px; z-index: 505;
+        -webkit-transform: translate(-281px, 0);
+        -ms-transform: translate(-281px, 0);
+        -o-transform: translate(-281px, 0);
+        transform: translate(-281px, 0);
+    }
+    .left-sidebar.open{
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}

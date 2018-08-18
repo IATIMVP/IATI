@@ -1,0 +1,32 @@
+<!-- Header -->
+<header class="main-header">
+  <div class="container-fluid clearfix">
+    <div class="float-left header-left">
+      <img src="../../assets/images/industry-circle-logo.png" alt="" width="36" height="34" class="img-fluid" />
+      <a href="javascript:;">Home</a>
+    </div>
+    <div class="float-right header-right">
+      <div class="post">
+        <select>
+          <option>Pre Post</option>
+          <option>Pre Post 1</option>
+          <option>Pre Post 2</option>
+          <option>Pre Post 3</option>
+        </select>
+      </div>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img *ngIf="picture" [src]="picture" alt="user avtar"> {{name}}
+          <img *ngIf="!picture" src="../../assets/images/user-avtar.png" alt="user avtar">
+          <label *ngIf="!name"> Shinjobi Ninja</label>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="javascript:;">Message</a>
+          <a class="dropdown-item" href="/account-setting">Setting</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /Header -->

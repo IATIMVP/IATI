@@ -1,0 +1,337 @@
+.song-upload-frame {
+    margin-top: 20px;   
+    padding: 2.083rem;
+    color: #919191;
+    position: relative;
+}
+.m-height125 {
+    min-height: 125px;
+}
+.upload-btn {
+    width: 240px; margin: 0 auto; cursor: pointer; height: 30px; line-height: 30px;
+    position: relative; text-align: center; overflow: hidden; margin-bottom: 5px;
+    margin-top: 17px;
+}
+.upload-btn a {
+    display: block; height: 100%; background-color: #fb51a5; color: #fff;
+}
+.upload-btn a:hover {
+    text-decoration: none;
+}
+.upload-btn input[type="file"]{
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+    height: 30px; opacity: 0;
+}
+.song-upload-frame p { 
+    font-weight: 600; margin-bottom: 14px; line-height: 19px; 
+}
+.embed-link p {
+    font-size: 1.167rem; font-weight: 600; margin-bottom: 11px; text-align: center;
+}
+.embed-link .link-box {
+    max-width: 400px; margin: 0 auto;
+}
+.embed-link .link-box .form-control, .post-form .form-control {
+    height: 40px; line-height: 40px; font-weight: 600; text-align: center;
+    color: #acacac; border-color: #acacac; border-radius: 0;background-color: #fff;
+    border: 1px solid #ccc;
+}
+.embed-link .link-box .form-control:focus {
+    border-color: rgba(0,0,0,0.05);
+    -webkit-box-shadow:inset 1px 0px 5px 0px rgba(0,0,0,0.25);
+        box-shadow:inset 1px 0px 5px 0px rgba(0,0,0,0.25);
+}
+.embed-link .link-box .form-control::-webkit-input-placeholder{
+    color: #acacac;  opacity: 1;
+}
+.embed-link .link-box .form-control::-moz-placeholder{
+    color: #acacac; opacity: 1;
+}
+.embed-link .link-box .form-control:-ms-input-placeholder{
+    color: #acacac; opacity: 1;
+}
+.embed-link .link-box .form-control:-moz-placeholder {
+    color: #acacac; opacity: 1;
+}
+.required-text {
+    text-align: right; color: #f1434c; font-weight: 600; padding-top: 15px;
+}
+.cover-photo p {
+    font-weight: 600; color: #919191;
+}
+.cover-photo .post-cover-image p {
+    color: #5b5b5b; font-weight: 600; margin-bottom: 5px; text-transform: uppercase;
+}
+.post-cover-image figure {
+    background-color: #f1f1f1; max-width: 201px; margin: 0;
+}
+.cover-photo .upload-btn {
+    width: 144px; margin: 20px 0 6px; 
+}
+.post-form {
+    padding-top: 10px;
+}
+.post-form .form-group {
+    position: relative; margin-bottom: 1.3rem;
+}
+.post-form label {
+    text-transform: uppercase; font-weight: 600; color: #5b5b5b; margin-bottom: 5px;
+}
+.post-form span.count {
+    position: absolute; right: 0; top: 0;
+}
+.post-form .form-control {
+    background-color: #f1f1f1; color: #5b5b5b; border:none; text-align: left;
+}
+.post-form .form-control:focus {
+    -webkit-box-shadow:inset 1px 0px 5px 0px rgba(0,0,0,0.15);
+        box-shadow:inset 1px 0px 5px 0px rgba(0,0,0,0.15);
+}
+.post-form .form-control::-webkit-input-placeholder{
+    color: #5b5b5b;  opacity: 1;
+}
+.post-form  .form-control::-moz-placeholder{
+    color: #5b5b5b; opacity: 1;
+}
+.post-form  .form-control:-ms-input-placeholder{
+    color: #5b5b5b; opacity: 1;
+}
+.post-form  .form-control:-moz-placeholder {
+    color: #5b5b5b; opacity: 1;
+}
+.post-form  textarea.form-control{
+    height: 80px;
+}
+.post-form .col-50 {
+    float: left;
+    width: 48%;
+}
+.post-form .col-50 + .col-50 {
+    float: right;
+}
+.post-form select.form-control:not([size]):not([multiple]) {
+    height: calc(38px + 2px);
+}
+.post-form .form-group p {
+    margin-bottom: 0; color: #919191; font-weight: 600;
+    padding-top: 6px; padding-bottom: 5px; 
+}
+.pad-top20 {
+    padding-top: 20px;
+}
+.post-subscribe {
+    border-top: 2px solid #f1f1f1;
+    margin-top: 6px;
+    padding-top: 23px;
+}
+.custom-control-inline {
+    outline: 0;
+}
+.custom-control-label {
+    font-size: 0.9167rem; font-weight: 600; 
+    padding-left: 3px; outline: 0;
+}
+.custom-control-label span {
+    color: #717171; font-weight: 400;
+}
+.post-subscribe .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color:#fff; border: 2px solid #717171;
+    width: 15px; height: 15px; top: 1px;
+}
+.post-subscribe .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url(./../images/checked.png); 
+    width: 15px; height: 15px; top: 1px;
+}
+.post-subscribe input[type="radio"]:focus, .post-subscribe input[type="checkbox"]:focus {
+    outline: 0;
+}
+.pad-top15 {
+    padding-top: 15px;
+}
+
+.post-subscribe p {
+    font-weight: 600;
+    color: #7d7d7d;
+    font-size: 0.9167rem;
+    margin-bottom: 0;
+}
+.post-subscribe p span {
+    text-transform: uppercase;
+    color: #333;
+}
+.post-subscribe p a, .post-subscribe p a:hover, .links a + a:hover {
+    color: #f9278f;
+    text-decoration: none;
+}
+.post-subscribe p a:hover, .links a + a:hover {
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(251,81,165,1);
+        box-shadow: 0px 1px 0px 0px rgba(251,81,165,1);
+}
+.pink-bg, .post-btn .btn.pink-bg {
+    background-color: #f9278f;
+}
+.pink-color {
+    color: #f9278f;
+}
+.post-btn {
+    padding: 44px 0 22px; 
+}
+.post-btn .btn {
+    width: 142px; height: 30px; line-height: 30px; border-radius: 30px; 
+    display: inline-block; padding: 0; color: #7d7d7d; border: 1px solid #7d7d7d; 
+    margin: 0 8px 12px; background-color: transparent;
+}
+.post-btn .btn:focus {
+    box-shadow: none;
+}
+.post-btn .btn:hover {
+    border-color: #c3c3c3; background-color: #ddd;
+}
+.post-btn .btn.pink-bg {
+    color: #fff; border-color: #f9278f;
+}
+.post-btn .btn.pink-bg:hover {
+    background-color: #e01379;
+}
+.modal p { 
+    color: #6a6969; 
+}
+.modal-body{
+    padding:1.083rem 1.667rem;
+}
+.links { 
+    text-align: right; font-weight: 600; padding-top: 5px;
+}
+.links a {
+    color: #868686;
+}
+.links a + a {
+    margin-left: 24px; position: relative; color: #f9278f;
+}
+.links a + a:before {
+    position: absolute; content: ""; top: 2px; left: -15px; 
+    width: 1px; height: 16px; background-color: #a2a2a2;    
+}
+.links a:hover {
+    text-decoration: none;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(134,134,134,1);
+        box-shadow: 0px 1px 0px 0px rgba(134,134,134,1);
+}
+.song-upload-frame .close {
+    font-size: 2.285rem; line-height: normal; position: absolute; right: 20px; top: 8px;
+}
+.song-upload-frame .close:focus {
+    outline: 0;
+}
+.song-listing {
+    float: left; width: 100%;
+}
+.song-listing + .song-listing {
+    margin-top: 10px;
+}
+.song-listing i {
+    font-size: 1.167rem;
+    font-weight: 700;
+}
+.song-listing span {
+    height: 30px; width: 25px; padding-top: 8px;
+}
+.song-thumb {
+    float: left; width: 30px;  height: 30px;
+}
+.song-name {
+    float: left; margin-left: 11px; height: 30px; background-color: #fff; color: #333;
+    font-weight: 600; font-size: 1rem; line-height: 30px; padding: 0 15px; width: 55%;
+    margin-right: 12px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+}
+.song-listing a {
+    color: #000; opacity: 0.5;
+}
+.song-listing a:hover {
+    opacity: 1;
+}
+.add-more {
+    width: 144px;
+    margin: 80px auto 0;
+    overflow: hidden;
+    height: 27px;   
+    position: relative; 
+    text-align: center;
+    font-size: 0.9167rem;
+}
+.add-more a {
+    border:1px solid #cecece;
+    line-height: 25px;
+    display: block;
+    color: #333;
+    background-color: #fff;
+}
+.add-more a:hover {
+    background-color: #cecece;
+    text-decoration: none;
+}
+.add-more input[type="file"] {
+    width: 144px;
+    height: 25px;
+    position: absolute; top: 0; left: 0; opacity: 0;
+}
+
+
+@media (min-width: 768px) and (max-width: 870px) {
+    .cover-photo, .post-form { 
+        max-width: 100%;  flex: 0 0 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .modal{ padding-right: 0!important; }
+    .modal-dialog { max-width: 370px; }
+}
+
+@media (max-width: 991px){
+    .song-upload-frame .close { 
+        top: 2px; 
+    }
+    .song-listing { 
+        margin-top: 10px; position: relative; 
+    }
+    .song-name { 
+        width: 70%; 
+    }
+}
+@media (max-width: 840px){
+    .song-name { width: 64%; }
+}
+@media (max-width: 767px){
+    .song-listing {
+        padding-right: 62px;
+        padding-left: 66px;
+    }
+    .menu-bar, .song-thumb, .action-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .song-thumb {
+        left: 25px;
+    }
+    .action-link {
+        right: 0!important;
+        left: auto;
+    }
+    .song-name {
+        width: 100%;
+        margin: 0;
+    }
+    .add-more {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 420px){
+    .post-form .col-50 {
+        width: 100%;
+    }
+    .post-form .pad-top20 {
+        padding-top: 0;
+    }
+}

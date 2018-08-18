@@ -1,0 +1,21 @@
+export const colorLiteral ={
+    "BUTTON" :  "#f5347c",
+    "GREY" : "#464647",
+    "WHITE" : "white",
+    "FBBTN" :"#3b5998",
+    "GBTN":"#913c2f",
+    "RED":"#d34836",
+    "LIGHTGREY":'#a1a2a3',
+    "BGCOLOR":"rgba(10,10,10,0.3)",
+    "BLUE" : "#4e99ef",
+    "STATUSBAR" :"#281214",
+    "DARK_GREY":"#202021",
+    "VERYLIGHT_GREY":"#f1f1f1",
+    "DARK_RED":"#b52424",
+    "BLUE":"#5979fa",
+    "PURPLE":"#4d5990",
+    "MEDIUM_GREY":"#e1e1e1",    
+    "LIGHT_PINK":"#ff4c8c",
+    "DARK_PINK":"#af1a4e",
+    "DULL_PINK":"#ae657d"
+};

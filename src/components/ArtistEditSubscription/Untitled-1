@@ -1,0 +1,213 @@
+import React, { Component } from "react";
+import {
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
+  Dimensions,
+  Image,
+  Alert,
+  Platform,
+  Modal,
+  StatusBar,
+  TextInput,
+  FlatList
+} from "react-native";
+import RoundCheckbox from 'rn-round-checkbox';
+import { Actions } from "react-native-router-flux";
+import { connect } from "react-redux";
+import Icon from 'react-native-vector-icons/Ionicons';
+import Icons from 'react-native-vector-icons/Entypo';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { colorLiteral } from "../../constants/Color";
+import { styles } from "../../styles/ArtistLoginStyles";
+import NavigationBar from '../common/NavBar';
+import OfflineNotice from "../common/OfflineNotice";
+import { setSub } from "../../actions/SetSubscriptionAction/setSubscriptionActions";
+const WINDOW = Dimensions.get("window");
+class AddSubscription extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0,
+      description: '',
+      data: [
+        {
+          id: 1,
+          isSelected: false,
+          name: "Limit Availaible",
+          description: 'Number of Subscribers who can reach this access.(If you leave this blank there will be no limit)'
+        },
+        {
+          id: 2,
+          isSelected: false,
+          name: "Require Shipping Address At Checkout",
+          description: ''
+        },
+        {
+          id: 3,
+          isSelected: false,
+          name: "Require Phone Number At Checkout",
+          description: ''
+        },
+      ],
+      selected: 0
+    };
+  }
+  componentDidMount() {
+
+  }
+  componentWillReceiveProps() {
+
+  }
+
+  handleSaveButton() {
+    if (this.state.value === 0) {
+      Alert.alert("Please Fill the Value")
+    }
+    else {
+      let data = {
+        "value": this.state.value,
+        "description": this.state.description,
+        "additional": this.state.selectedName
+      }
+      this.props.setSub(data)
+    }
+  }
+  handleDeleteButton() {
+    this.setState({
+      selected: 0, value: 0,
+      description: ''
+    })
+  }
+  handleKeyDown(e) {
+    if (e.nativeEvent.key == "Done") {
+      dismissKeyboard();
+    }
+  }
+  _keyExtractor = (item, index) => item.id;
+  renderList({ item, index }) {
+    return (
+      <View style={{ flex: 0.1, paddingBottom: item.description === '' ? "2%" : '3%', flexDirection: 'row' }}>
+        <View style={{ flex: 0.1, justifyContent: 'center'}}>
+          <RoundCheckbox
+            icon="md-checkmark"
+            size={this.state.selected === item.id ? 32: 28}
+            iconColor={colorLiteral.BUTTON}
+            borderColor={colorLiteral.GREY}
+            backgroundColor='white'
+            checked={this.state.selected === item.id ? true : false}
+            onValueChange={() => {
+              this.setState({
+                selected: item.id,
+                selectedName: item.name
+              })
+            }
+            }
+          />
+        </View>
+        <View style={{ flex: 0.9 }}>
+          <Text style={{ fontSize: WINDOW.width * 0.035, color: colorLiteral.GREY, paddingHorizontal: '2%', paddingTop: item.description === '' ? '2%' : '3%' }}>{item.name}</Text>
+          <Text style={{ fontSize: WINDOW.width * 0.03, color: 'grey', paddingHorizontal: '2%' }}>{item.description}</Text>
+        </View>
+      </View>
+    );
+  }
+  render() {
+    return (
+      <KeyboardAwareScrollView scrollEnabled={true}
+        keyboardShouldPersistTaps={'always'}
+        contentContainerStyle={[styles.container, { backgroundColor: !this.state.openModal ? colorLiteral.WHITE : "rgba(130, 130, 130, 0.5)" }]} showsVerticalScrollIndicator={false}>
+        <View style={[styles.container, { backgroundColor: !this.state.openModal ? colorLiteral.WHITE : "rgba(130, 130, 130, 0.5)" }]}>
+          <StatusBar
+            hidden={false}
+            backgroundColor={colorLiteral.STATUSBAR}
+            barStyle="dark-content"
+          />
+          <OfflineNotice />
+          <NavigationBar
+            backgroundColor={!this.state.openModal ? colorLiteral.WHITE : "rgba(130, 130, 130, 0.5)"}
+            title="New Subscription Level"
+            back
+            onLeftButtonPress={() => Actions.ArtistLogin()}
+          />
+          <View style={{ flex: 0.9, marginHorizontal: '3%' }}>
+            <View style={{ flex: 0.18, paddingTop: '2%' }}>
+              <Text style={{ fontSize: WINDOW.width * 0.045, paddingTop: '1%', paddingBottom: '0%' }}>Amount</Text>
+              <Text style={{ fontSize: WINDOW.width * 0.031, color: 'grey' }}>Set an amount you want to collect from subscribers who select</Text>
+              <Text style={{ fontSize: WINDOW.width * 0.031, color: 'grey' }}>this subscription level.</Text>
+
+              <View style={{ flex: 0.9, flexDirection: 'row', width: WINDOW.width * 0.33, borderRadius: 5, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={{flex:0.2,alignItems:'center'}}><Text style={{ fontSize: 17 }}>$</Text></View>
+                <View style={{flex:0.5,backgroundColor:'#d2d2d2',justifyContent:'center'}}>
+                  <TextInput
+                    returnKeyType={"next"}
+                    maxLength={10}
+                    keyboardType={"numeric"}
+                    underlineColorAndroid={"transparent"}
+                    autoCapitalize={"none"}
+                    style={styles.valueSub}
+                    value={this.state.value}
+                    onChangeText={value => this.setState({ value: value })}
+                  />
+                </View>
+                <View style={{flex:0.3}}><Text style={{ fontSize: 16,textAlign:'center'}}>USD</Text></View>
+
+              </View>
+
+            </View>
+            <View style={{ flex: 0.32, backgroundColor: "white", marginTop: '2%' }}>
+              <Text style={{ fontSize: WINDOW.width * 0.045, paddingTop: '1%', paddingBottom: '1%' }}>Description</Text>
+              <Text style={{ fontSize: WINDOW.width * 0.032, color: 'grey' }}>What item are you offering to subscribers who select this</Text>
+              <Text style={{ fontSize: WINDOW.width * 0.032, color: 'grey' }}>subscription level?</Text>
+              <View style={{ flex: 0.9, backgroundColor: '#d2d2d2', borderRadius: 6, marginTop: '3%' }}>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={4}
+                  returnKeyType={"done"}
+                  onKeyPress={this.handleKeyDown}
+                  underlineColorAndroid={"transparent"}
+                  autoCapitalize={"none"}
+                  style={styles.email}
+                  value={this.state.description}
+                  onChangeText={description => this.setState({ description: description })}
+                />
+              </View>
+
+            </View>
+            <View style={{ flex: 0.32 }}>
+              <Text style={{ fontSize: WINDOW.width * 0.045, paddingTop: '2%', paddingBottom: '1%' }}>Additional Options</Text>
+              <FlatList
+                scrollEnabled={false}
+                data={this.state.data}
+                extraData={this.state}
+                keyExtractor={this._keyExtractor.bind(this)}
+                showsVerticalScrollIndicator={false}
+                renderItem={({ item, index }) => this.renderList({ item, index })
+                }
+              />
+            </View>
+            <View style={{ flex: 0.18, flexDirection: 'row' }}>
+              <TouchableOpacity style={styles.saveButton} onPress={() => { this.handleSaveButton() }}>
+                <Text style={styles.loginText}>Save</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.delButton} onPress={() => { this.handleDeleteButton() }}>
+                <Text style={styles.delText}>Delete</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </KeyboardAwareScrollView>
+    );
+  }
+}
+
+
+function mapUser(state) {
+  return {
+
+  };
+}
+
+export default connect(mapUser, { setSub })(AddSubscription);

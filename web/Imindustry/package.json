@@ -1,0 +1,37 @@
+{
+  "name": "iamindustry-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "angular-audio-player-html5-es6": "^2.2.2",
+    "connect-multiparty": "^2.1.1",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "debug": "2.6.9",
+    "easyimage": "^3.1.0",
+    "express": "4.16.0",
+    "formidable": "^1.2.1",
+    "http-errors": "1.6.2",
+    "jade": "1.11.0",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.1",
+    "morgan": "1.9.0",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth2": "^1.4.0",
+    "passport-strategy": "^1.0.0",
+    "request": "^2.87.0",
+    "spotify-web-api-js": "^0.24.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^6.0.8",
+    "@angular-devkit/build-angular": "~0.6.8"
+  }
+}

@@ -1,0 +1,163 @@
+<app-login-header></app-login-header>
+  <!-- /Header -->
+
+  <!-- Main Content -->
+  <main class="main clearfix">
+  
+  <app-left-bar></app-left-bar>
+    <!-- /sidebar -->
+
+    <!-- Create Track Content -->
+    <div class="content ">
+      <div class="container-fluid">
+          <form [formGroup]="trackForm" (ngSubmit)="submitpost(userInfo);">
+        <div class="row">
+          <div class="col-sm-12 col-lg-11">
+            <h1 class="title"><span>CREATE Track</span> 
+            <a href="#" class="info_icon">
+            	<i>Tracks are not considered paid posts. If you want to add a track as a paid post refer to the '+ New Post' button. <br/> Tracks will appear on your profile for fans to listen to.</i>
+            </a>  
+            </h1>
+         
+            <div class="light-gray-bg m-height125 song-upload-frame" ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)"
+            [uploader]="uploader">
+            <div class="upload-btn">
+              <a href="javascript:;" >Upload song or drag and drop</a>
+              <a href="javascript:;" > + Add More</a>
+
+              <input type="file" accept="audio/*" [uploader]="uploader" ng2FileSelect formControlName="track_audio"/>
+              <br/>
+            </div>
+            <p class="text-center">1GB Max File Size / 2GB Total Storage
+              <br> Supported file types: WAV, MP3, AIF, FLAC, AAC</p>
+          </div>
+
+             <div class="light-gray-bg m-height155 song-upload-frame" *ngIf="uploader.queue.length > 0" >
+                <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                <div class="song-listing flex_center"> 
+                    <audio controls controlsList="nodownload"> <source src="https://iati-audio.s3.amazonaws.com/audio/{{fileData}}"> </audio>
+                    <div class="song-thumb"><img class="img-fluid" src="../../assets/images/cover-image-thumb2.jpg" alt="user thumb" /></div>
+                    <div class="song-name">Best Friends, Right?</div>
+                    <div class="action-link">
+                      <span class="float-left"><a href="javascript:;"><i class="fas fa-play"></i></a></span>
+                      <span class="float-left"><a href="javascript:;"><i class="far fa-trash-alt"></i></a></span>
+                    </div>
+                  </div> 
+            </div>
+
+            <!-- <div class="required-text">
+              <span>Fields Required ^</span>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 cover-photo">
+            <div class="post-cover-image">
+              <p>COVER IMAGE*</p>
+              <figure><img class="img-fluid" src="../../assets/images/cover-image2.jpg" alt="post cover" /></figure>
+            </div>
+            <div class="upload-btn">
+              <a href="javascript:;">Upload image</a>
+              <input type="file" value="Upload songs or drag and drop" />
+            </div>
+            <p>Minimum 600x600 px. Max 20MB</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1 post-form">
+            <form action="javascript:;" method="POST">
+              <div class="form-group">
+                <label>Song TITLE*</label> <span class="count">0/150</span>
+                <input type="text" class="form-control" placeholder="Best Friends, Right?" />
+              </div>
+              
+              <div class="clearfix ">
+                <div class="col-50">
+                  <div class="form-group">
+                    <label>PRIMARY GENRE*</label> 
+                    <select class="form-control"><option>Electronic</option></select>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="post-subscribe"> 
+              <div class="post-btn">
+                <button class="btn pink-bg" type="submit" data-toggle="modal" data-target="#addModal">Post</button>
+                <button class="btn" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+                <p>* - Required Field</p>
+              </div>
+              <p><span>IMPORTANT:</span> By sharing, you confirm your posts and sounds comply <br> with out <a href="javascript:;">Terms of Use</a> and don’t infringe on anyone’s rights.</p>
+            </div>
+          </div>
+        </div>
+          </form>
+      </div>
+    </div>
+    <!-- /Dashboard Content -->
+  </main>
+  <!-- /Main Content -->
+
+  <app-footer></app-footer>
+  <!-- /Footer -->
+
+
+  <!-- Add Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your track has been added!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="share_link">
+        	<h6 class="title_text">Link to Share:</h6>
+     		<input type="text" class="form-control" placeholder="http://iamtheindustry.com/best-friends-right/...">
+     		<button class="btn round_btn" type="submit">Copy</button>
+     	</div>
+     	
+      </div>
+      <div class="modal-footer flow_root">
+         <h6 class="title_text">Share this link with your friends.</h6>
+         <div class="clearfix"></div>
+         <ul class="social_icons">
+         	<li><a href="#" class="fb"><i class="fab fa-facebook"></i></a></li>
+         	<li><a href="#" class="tw"><i class="fab fa-twitter-square"></i></a></li>
+         	<li><a href="#" class="gplus"><i class="fab fa-google-plus-square"></i></a></li>
+         	<li><a href="#" class="mail"><i class="far fa-envelope"></i></a></li>
+         </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="table-box">
+      <div class="table-box-cell">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm Navigation</h5>
+            </div>
+            <div class="modal-body">
+              <p>You have unsaved changes.<br> Are you sure you want to leave this page&#63;</p>
+
+              <div class="links">
+                <a href="javascript:;" data-dismiss="modal">Stay on this page</a>
+                <a href="javascript:;" data-dismiss="modal">Leave this page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

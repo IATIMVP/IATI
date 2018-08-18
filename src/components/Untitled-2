@@ -1,0 +1,85 @@
+
+
+User signup - while signing up username needs some indication that it is available and not taken by someone else.\
+ (Blue check mark) 
+ Artist signup - needs indication username is available.  
+
+ Genre List - Podcast is last option and should be capitalized  
+.
+.  
+
+The ability to delete cover art selection or change it while creating a post.  
+
+Post Creation Type- ‘Episode’ missing 
+
+//On user sign up “Reset” doesn’t need “” marks. Simply Reset 
+
+When pressing ‘Done’ on Subscription Level creation. I am not taken out of the field.  
+Character Limit for this field is ________ 
+
+All three options at the bottom can be selected. Not just one.  
+
+If ‘Limit Available’ is selected - a text box below will generate for user to input the number available
+
+//Text error: ‘Get ready for your subscribers’ screen during switch to artist sign up:  private should say profile. 
+
+
+  
+   Subscription title: 40 character limit 
+   . Subscription description: 200
+   . Icons on front screen cut off on right edge
+   if already logged in user should be taken to Home feed not back to the first screen that has ‘login’ on the front.
+    Only back to that page if user logs out. 
+
+  18. User can’t add spaces in username
+
+   
+     When the keyboard is displayed on the “New Subscription Level” screen, 
+     I should be able to scroll the view. This is a minor issue, but it was annoying that 
+     I have to first dismiss the keyboard before seeing the additional options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+After using other apps on my phone and coming back to IATI, my username and handle is blank. See image below.
+When in air-plane mode, I am seeing weird artifacts in the status bar.
+
+
+
+
+
+
+
+
+
+
+
+
+Pratham
+
+ 1 When switching to an Artist account, the genre does not show after making a selection.
+     By the way, when I select a genre, I should not have to press the back button.
+     This applies to all screens that prompts the user for a selection.
+ 2 From the Account screen, I clicked on “Switch Artist”. 
+   I got the “Getting Started: IATI for Artists” screen as expected but when I tap the back button, 
+   it takes me to add a post. Watch the movie below from the 24 second mark to the 34 second mark. 
+   You can double-click the image to play my screen recording.
+ 3. Post Creation: YouTube link gets an invalid link message
+ 4 Profile picture selection on ‘Switch to Artist’ sign up works sometimes doesn’t work other times. 
+  8  Square crop on cover art post creation
+
+
+ 5- Also, on the Add subscription once I select one of the “Additional Options”, I cannot deselect it.
+ 6-After switching to an Artist, I am allowed to switch again. 
+ 7-When subscription level is saved - the completion screen should show level with ‘$’ symbol and plus sign it currently
+  just shows number. For example (25 should be $25+) 
